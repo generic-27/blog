@@ -1,0 +1,143 @@
+<script>
+    import { marked } from "marked";
+    import { explicitCoercion, implicitCoercion, closure, polyfilling } from "./markdown-files/up-and-going";
+</script>
+
+<div class="blog-text-container">
+    <h1>Up and going</h1>
+    <div>
+        The first statement that I ever heard in regards to JavaScript was the phrase "<strong>Dumb kid brother</strong>".
+        It has been close to 7 years, since I started coding seriously and I still do not understand, how the 
+        world's most widely used language, a language that rules the entire web space, works?<br/><br/>
+    </div>
+    <div>
+        The intention behind creating these articles is to mainly learn and treat them as a point of reference to
+        solidify my understanding of the language. This by chance, also happens to be the first blog that I have ever written.
+        I am hoping I can make this a hobby.<br/><br/>
+    </div>
+    <div class="blog-sub-header">Up and Going</div>
+    <div class="blog-paragraph">
+        The first part of this series <strong>(You don't know JS)</strong> was a general introduction to programming and a discussion
+        of some aspects of <i>JavaScript</i>. There are few topics that caught my attention.
+        <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&%20going/README.md#you-dont-know-js-up--going" target="_blank">YDKJS</a>
+        <ul class="blog-list-elements">
+            <li>Coercion</li>
+            <li>Typed values not typed variables</li>
+            <li>Equality</li>
+            <li>Hoisting</li>
+            <li>Closure</li>
+            <li>Polyfilling</li>
+            <li>Transpiling</li>
+        </ul>        
+    </div>
+    <div class="blog-sub-header">
+        Coercion
+    </div>
+    <div class="blog-paragraph">
+        At the basic level coercion in JavaScript is conversion of a type into another. There are two forms of coercion in JavaScript
+        <ol class="blog-list-elements">
+            <li>Explicit coercion</li>
+            <li>Implicit coercion</li>
+        </ol>
+        <p>Explicit conversion is straightforward. We know the current type of the value and the resultant type it is converted to.</p>
+        <div class="blog-code-block">{@html marked(explicitCoercion)}</div>
+        <p>The conversion in the above cases is explicit. We know that the <i>name</i> variable is a string and so is the variable <i>numString</i>.
+        In the third case the string type is explicity converted to a number.</p>
+        <p>Implicit conversion on the other hand is quite interesting and we will experience and interesting quality in the <strong>Equality</strong>
+            section. The conversion is not very apparent.
+        </p>
+        <div class="blog-code-block">{@html marked(implicitCoercion)}</div>
+        <p>The conversion in the first case is explicit, we know that num is a string. In the second case the value of num is coerced into a number.
+            Much to learn on coercion!
+        </p>
+    </div>
+    <div class="blog-sub-header">
+        Typed values not typed variables
+    </div>
+    <div class="blog-paragraph">
+        <p>There is a neat way to learn the type of a variable in JavaScript. It's the typeof() operator. When checking the type of a variable, JavaScript
+            looks at the value of the variable and not the variable itself.
+        </p>
+    </div>
+    <div class="blog-sub-header">
+        Equality
+    </div>
+    <div class="blog-paragraph">
+        <p>Equality in JavaScript comes in two flavors == and ===. The easiest way to understand these would be that == checks for value equality with coercion
+            and === does not allow coercion, which is often called "strict equality"
+        </p>
+        <p>
+            For the past 7 years I believed that the difference between == and === is that strict equality checked the reference and the other checked
+            value. I was missing the understanding of the word coercion! I still do think that the avoiding == maes sense when working with other people.
+            Somewhere down the line people can make mistakes.
+        </p>
+    </div>
+    <div class="blog-sub-header">
+        Hoisting
+    </div>
+    <div class="blog-paragraph">
+        <p>
+            On declaring a variable in JavaScript, it's made available throughout the entire scope it was declared in. JavaScript hoists that variable to the top, to
+            be accessed throughout. The same works for functions. Variable hoisting can cause a lot of confusion and it's better to avoid it. The best approach is 
+            to use JavaScript in "strict" mode and use let for variable declaration. 
+        </p>
+    </div>
+    <div class="blog-sub-header">
+        Closure
+    </div>
+    <div class="blog-paragraph">
+        <p>
+            One can think of Closure as a way to "remember" a function's scope, like variables, even after the function has finished executing. The best way to explain
+            closure is through an example
+        </p>
+        <div class="blog-code-block">{@html marked(closure)}</div>
+        <p>
+            In the above example even after it's execution the returned function value is saved in the plusTwo variable, which is basically holding a function type.
+            Calling plusTwo remembers the original value passed in, which was 2.
+        </p>
+    </div>
+    <div class="blog-sub-header">
+        Polyfilling
+    </div>
+    <div class="blog-paragraph">
+        <p>
+            Polyfilling refers to taking the definition of a newer feature and producing a piece of code that's equivalent to the behavior, but is able
+            to run in older JavaScript environments. As an example, ES6 deprecated the utility isNan(...) which was buggy and replaced it with Number.isNan(...).
+            The example below polyfills the function for older environments.
+        </p>
+        <div class="blog-code-block">{@html marked(polyfilling)}</div>
+    </div>
+</div>
+
+<style>
+    .blog-text-container {
+        margin: 0px auto;
+        padding: 100px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        max-width: 600px;
+        line-height: 1.5;
+    }
+
+    .blog-sub-header {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .blog-paragraph {
+        margin-top: 10px;
+    }
+    
+    .blog-list-elements {
+        font-weight: 700;
+    }
+
+    .blog-code-block {
+        background-color: #3b444b;
+        margin-top: 10px;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+    }
+
+</style>
+
