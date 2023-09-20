@@ -11,7 +11,7 @@
     <div class="blog-list-container">
         {#each blogData as data}
             <div class="blog-list-item">
-                <li><a href="/blog/{data.title}" target="_blank">{data.title}</a></li>
+                <li><a href="/ydkjs/{data.title}" target="_blank">{data.title}</a></li>
             </div>
         {/each}
     </div>
