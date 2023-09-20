@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="../_app/immutable/assets/3.c7fba5b9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.e85f940c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.9229e0e3.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.6861ed34.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.d3cb4642.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.668ab1bc.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.2a75820b.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <div class="blog-container"><div class="blog-text-container svelte-99q8e4"><h1 data-svelte-h="svelte-16bxzce">Up and going</h1> <div data-svelte-h="svelte-j1yqyc">The first statement that I ever heard in regards to JavaScript was the phrase &quot;<strong>Dumb kid brother</strong>&quot;.
+        It has been close to 7 years, since I started coding seriously and I still do not understand, how the 
+        world&#39;s most widely used language, a language that rules the entire web space, works?<br><br></div> <div data-svelte-h="svelte-ulk8vc">The intention behind creating these articles is to mainly learn and treat them as a point of reference to
+        solidify my understanding of the language. This by chance, also happens to be the first blog that I have ever written.
+        I am hoping I can make this a hobby.<br><br></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-1i0c26i">Up and Going</div> <div class="blog-paragraph svelte-99q8e4" data-svelte-h="svelte-1ujz1y1">The first part of this series <strong>(You don&#39;t know JS)</strong> was a general introduction to programming and a discussion
+        of some aspects of <i>JavaScript</i>. There are few topics that caught my attention.
+        <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&%20going/README.md#you-dont-know-js-up--going" target="_blank">YDKJS</a> <ul class="blog-list-elements svelte-99q8e4"><li>Coercion</li> <li>Typed values not typed variables</li> <li>Equality</li> <li>Hoisting</li> <li>Closure</li> <li>Polyfilling</li> <li>Transpiling</li></ul></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-1ni34n8">Coercion</div> <div class="blog-paragraph svelte-99q8e4">At the basic level coercion in JavaScript is conversion of a type into another. There are two forms of coercion in JavaScript
+        <ol class="blog-list-elements svelte-99q8e4" data-svelte-h="svelte-1xqvxvj"><li>Explicit coercion</li> <li>Implicit coercion</li></ol> <p data-svelte-h="svelte-cfogkp">Explicit conversion is straightforward. We know the current type of the value and the resultant type it is converted to.</p> <div class="blog-code-block svelte-99q8e4"><!-- HTML_TAG_START --><pre><code>  var name = &quot;John&quot;;
+
+  var numString = &quot;22&quot;;
+
+  var num = Number(numString);
+</code></pre>
+<!-- HTML_TAG_END --></div> <p data-svelte-h="svelte-f8z92t">The conversion in the above cases is explicit. We know that the <i>name</i> variable is a string and so is the variable <i>numString</i>.
+        In the third case the string type is explicity converted to a number.</p> <p data-svelte-h="svelte-38qvq0">Implicit conversion on the other hand is quite interesting and we will experience and interesting quality in the <strong>Equality</strong>
+            section. The conversion is not very apparent.</p> <div class="blog-code-block svelte-99q8e4"><!-- HTML_TAG_START --><pre><code>  var num = &quot;27&quot;;
+  var num2 = num * 1;
+</code></pre>
+<!-- HTML_TAG_END --></div> <p data-svelte-h="svelte-14ke52j">The conversion in the first case is explicit, we know that num is a string. In the second case the value of num is coerced into a number.
+            Much to learn on coercion!</p></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-3skg5q">Typed values not typed variables</div> <div class="blog-paragraph svelte-99q8e4" data-svelte-h="svelte-ubauia"><p>There is a neat way to learn the type of a variable in JavaScript. It&#39;s the typeof() operator. When checking the type of a variable, JavaScript
+            looks at the value of the variable and not the variable itself.</p></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-rwv0co">Equality</div> <div class="blog-paragraph svelte-99q8e4" data-svelte-h="svelte-1o4dw4i"><p>Equality in JavaScript comes in two flavors == and ===. The easiest way to understand these would be that == checks for value equality with coercion
+            and === does not allow coercion, which is often called &quot;strict equality&quot;</p> <p>For the past 7 years I believed that the difference between == and === is that strict equality checked the reference and the other checked
+            value. I was missing the understanding of the word coercion! I still do think that the avoiding == maes sense when working with other people.
+            Somewhere down the line people can make mistakes.</p></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-j0tmkx">Hoisting</div> <div class="blog-paragraph svelte-99q8e4" data-svelte-h="svelte-ss6k6y"><p>On declaring a variable in JavaScript, it&#39;s made available throughout the entire scope it was declared in. JavaScript hoists that variable to the top, to
+            be accessed throughout. The same works for functions. Variable hoisting can cause a lot of confusion and it&#39;s better to avoid it. The best approach is 
+            to use JavaScript in &quot;strict&quot; mode and use let for variable declaration.</p></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-azu73x">Closure</div> <div class="blog-paragraph svelte-99q8e4"><p data-svelte-h="svelte-12xisx9">One can think of Closure as a way to &quot;remember&quot; a function&#39;s scope, like variables, even after the function has finished executing. The best way to explain
+            closure is through an example</p> <div class="blog-code-block svelte-99q8e4"><!-- HTML_TAG_START --><pre><code>  function makeAdder(x) {
+
+    function add(y) {
+      return x + y;
+    }
+
+    return add;
+  }
+
+  var plusTwo = makeAdder(2);
+
+  plusTwo(3); // This results in 5 -&gt; 2(value of x) + 3(value of y)
+</code></pre>
+<!-- HTML_TAG_END --></div> <p data-svelte-h="svelte-1e9d70f">In the above example even after it&#39;s execution the returned function value is saved in the plusTwo variable, which is basically holding a function type.
+            Calling plusTwo remembers the original value passed in, which was 2.</p></div> <div class="blog-sub-header svelte-99q8e4" data-svelte-h="svelte-dqy2ud">Polyfilling</div> <div class="blog-paragraph svelte-99q8e4"><p data-svelte-h="svelte-1cvvezj">Polyfilling refers to taking the definition of a newer feature and producing a piece of code that&#39;s equivalent to the behavior, but is able
+            to run in older JavaScript environments. As an example, ES6 deprecated the utility isNan(...) which was buggy and replaced it with Number.isNan(...).
+            The example below polyfills the function for older environments.</p> <div class="blog-code-block svelte-99q8e4"><!-- HTML_TAG_START --><pre><code>  if (!Number.isNaN) {
+    Number.isNaN = function isNaN(x) {
+      return x !== x;
+    };
+  }
+</code></pre>
+<!-- HTML_TAG_END --></div></div> </div></div> 
+			
+			<script>
+				{
+					__sveltekit_ppr595 = {
+						assets: "/blog",
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.e85f940c.js"),
+						import("../_app/immutable/entry/app.6861ed34.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
