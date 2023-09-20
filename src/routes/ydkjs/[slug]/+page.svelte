@@ -1,5 +1,5 @@
 <script>
-    import UpAndGoing from "../../../components/blog/you_dont_know_js/part_1/up-and-going.svelte";
+    import UpAndGoing from "../../../components/blog/you_dont_know_js/part_1/upAndGoing.svelte";
 </script>
 
 
