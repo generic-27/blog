@@ -8,10 +8,24 @@ export const explicitCoercion = `
   \`\`\`
 `;
 
-export const implicitCoercion =`
+export const implicitCoercion = `
   \`\`\`
     var num = "27";
     var num2 = num * 1;
+  \`\`\`
+`;
+
+export const hoisting = `
+  \`\`\`
+    function hoistedVariable() {
+      console.log(a); // This will be undefined
+
+      a = 4;
+
+      console.log(a); // This is 4
+
+      var a;
+    }
   \`\`\`
 `;
 
