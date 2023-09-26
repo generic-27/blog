@@ -1,0 +1,36 @@
+.blog-text-container {
+	margin: 0px auto;
+	padding: 100px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	max-width: 600px;
+	line-height: 1.5;
+}
+
+.blog-sub-header {
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 20px;
+}
+
+.blog-paragraph {
+	margin-top: 10px;
+}
+
+.blog-list-elements {
+	font-weight: 700;
+}
+
+.blog-code-block {
+	background-color: #3b444b;
+	margin-top: 10px;
+	padding: 10px;
+	color: white;
+	border-radius: 5px;
+}
+
+code {
+	background-color: #3b444b;
+	color: white;
+	padding: 3px;
+	border-radius: 3px;
+}

@@ -11,16 +11,16 @@
 
 <div class="blog-text-container">
 	<h1>Up and going</h1>
-	<div>
+	<div class="blog-paragraph">
 		The first statement that I ever heard in regards to JavaScript was the phrase "
 		<strong>Dumb kid brother</strong>". It has been close to 7 years, since I started coding
 		seriously and I still do not understand, how the world's most widely used language that rules
-		the entire web space, works?<br /><br />
+		the entire web space, works?
 	</div>
-	<div>
+	<div class="blog-paragraph">
 		The intention behind creating these articles is to mainly learn and treat them as a point of
 		reference to solidify my understanding of <i>JavaScript</i>. This by chance, also happens to be
-		the first blog that I have ever written and I am hoping I can make this a hobby.<br /><br />
+		the first blog that I have ever written and I am hoping I can make this a hobby.
 	</div>
 	<div class="blog-sub-header">Up and Going</div>
 	<div class="blog-paragraph">
@@ -139,39 +139,5 @@
 </div>
 
 <style>
-	.blog-text-container {
-		margin: 0px auto;
-		padding: 100px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		max-width: 600px;
-		line-height: 1.5;
-	}
-
-	.blog-sub-header {
-		font-size: 20px;
-		font-weight: 700;
-	}
-
-	.blog-paragraph {
-		margin-top: 10px;
-	}
-
-	.blog-list-elements {
-		font-weight: 700;
-	}
-
-	.blog-code-block {
-		background-color: #3b444b;
-		margin-top: 10px;
-		padding: 10px;
-		color: white;
-		border-radius: 5px;
-	}
-
-	code {
-		background-color: #3b444b;
-		color: white;
-		padding: 3px;
-		border-radius: 3px;
-	}
+	@import '../../../../styles/global_blog.css';
 </style>
