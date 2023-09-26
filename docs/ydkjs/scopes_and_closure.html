@@ -5,15 +5,15 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../_app/immutable/assets/3.ba36deba.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.ee6f3192.js">
+		<link href="../_app/immutable/assets/3.076d5026.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.843543c1.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.09e5b5de.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.806db39d.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.71ae5d6d.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.59075ee6.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.d3cb4642.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/0.668ab1bc.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/3.adddf2f1.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.4d31cde1.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">  <div class="blog-container"><div class="blog-text-container"><h1 data-svelte-h="svelte-jbzrqt">Scopes and closure</h1> <div class="blog-paragraph" data-svelte-h="svelte-b81l5">This book is awesome! I wish I had read it sooner. Most programming languages that I have used,
@@ -67,11 +67,11 @@
         test2();
     }
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-887h16">Going back to the two parts involved in variable declaration and assignment, there&#39;s an
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1qtf9ms">Going back to the two parts involved in variable declaration and assignment, there&#39;s an
 		interesting lookup concept that JavaScript performs. The easier version is - When a variable
 		appears on the left side of an assignment the compiler does a <b>LHS</b> lookup and when it&#39;s on
 		the right side of the assignment it does a RHS lookup. A LHS lookup looks for the variable container
-		itself but the RHS lookup is merely getting the value of the variable. RHS lookups can be a bit tricky.
+		itself but the RHS lookup is merely getting the value of the variable. LHS lookups can be a bit tricky.
 		As always, examples help!</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    function foo(num) {
         var num2 = num;
         return num + num2;
@@ -79,15 +79,16 @@
 
     var ans = foo(2);
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-r7ivqi">Let&#39;s break it down. List of LHS lookups
-		<ul><li>ans =</li> <li>num = (this is interesting, it&#39;s the pararmeter passed to the function)</li> <li>num2 =</li></ul>
-
-		List of RHS lookups
-		<ul><li>foo</li> <li>= num</li> <li>num +</li> <li>+ num2</li></ul></div> </div></div> 
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1fcm314">Let&#39;s break it down.
+		<div class="blog-paragraph"><b>List of LHS lookups</b> <ul><li>ans =</li> <li>num = (this is interesting, it&#39;s the pararmeter passed to the function)</li> <li>num2 =</li></ul> <b>List of RHS lookups</b> <ul><li>foo</li> <li>= num</li> <li>num +</li> <li>+ num2</li></ul></div>
+		Discussing lookups further, it gets even more interesting when nested scopes are involved. When searching
+		for a variable, JavaScript considers all scopes. It starts with the inner most and keeps looking
+		for variable<b>containers / values</b> in all the scopes that the current scope is enclosed in. This
+		is where it chooses between a LHS and RHS lookup.</div> <div class="blog-paragraph" data-svelte-h="svelte-nv7ukz">That was just the first Chapter from the book. Phew!</div> </div></div> 
 			
 			<script>
 				{
-					__sveltekit_ijaho5 = {
+					__sveltekit_zhaq8 = {
 						assets: "/blog",
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
@@ -98,8 +99,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.ee6f3192.js"),
-						import("../_app/immutable/entry/app.71ae5d6d.js")
+						import("../_app/immutable/entry/start.843543c1.js"),
+						import("../_app/immutable/entry/app.59075ee6.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],

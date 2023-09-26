@@ -90,26 +90,34 @@
 		interesting lookup concept that JavaScript performs. The easier version is - When a variable
 		appears on the left side of an assignment the compiler does a <b>LHS</b> lookup and when it's on
 		the right side of the assignment it does a RHS lookup. A LHS lookup looks for the variable container
-		itself but the RHS lookup is merely getting the value of the variable. RHS lookups can be a bit tricky.
+		itself but the RHS lookup is merely getting the value of the variable. LHS lookups can be a bit tricky.
 		As always, examples help!
 	</div>
 	<div class="blog-code-block">{@html marked(lhsRhsLookup)}</div>
 	<div class="blog-paragraph">
-		Let's break it down. List of LHS lookups
-		<ul>
-			<li>ans =</li>
-			<li>num = (this is interesting, it's the pararmeter passed to the function)</li>
-			<li>num2 =</li>
-		</ul>
+		Let's break it down.
+		<div class="blog-paragraph">
+			<b>List of LHS lookups</b>
+			<ul>
+				<li>ans =</li>
+				<li>num = (this is interesting, it's the pararmeter passed to the function)</li>
+				<li>num2 =</li>
+			</ul>
 
-		List of RHS lookups
-		<ul>
-			<li>foo</li>
-			<li>= num</li>
-			<li>num +</li>
-			<li>+ num2</li>
-		</ul>
+			<b>List of RHS lookups</b>
+			<ul>
+				<li>foo</li>
+				<li>= num</li>
+				<li>num +</li>
+				<li>+ num2</li>
+			</ul>
+		</div>
+		Discussing lookups further, it gets even more interesting when nested scopes are involved. When searching
+		for a variable, JavaScript considers all scopes. It starts with the inner most and keeps looking
+		for variable<b>containers / values</b> in all the scopes that the current scope is enclosed in. This
+		is where it chooses between a LHS and RHS lookup.
 	</div>
+	<div class="blog-paragraph">That was just the first Chapter from the book. Phew!</div>
 </div>
 
 <style>
