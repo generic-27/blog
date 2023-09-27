@@ -47,3 +47,21 @@ export const lhsRhsLookup = `
     var ans = foo(2);
 \`\`\`
 `;
+
+export const lexicalScope = `
+\`\`\`
+
+    var num3 = 5;
+    function outer(num) {
+        var num2 = num + 4;
+
+        function inner() {
+            console.log(num, num2, num3);
+        }
+
+        inner();
+    }
+    
+    outer(2);
+\`\`\`
+`;

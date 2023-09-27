@@ -2,11 +2,14 @@
 	import { marked } from 'marked';
 	import {
 		abstractSyntaxTree,
+		lexicalScope,
 		lhsRhsLookup,
 		shadowing,
 		tokenization,
 		variableDeclaration
 	} from './markdown-files/scopes-and-closure';
+
+	import ConcentricCircle from './concentric-circle.svelte';
 </script>
 
 <div class="blog-text-container">
@@ -118,6 +121,35 @@
 		is where it chooses between a LHS and RHS lookup.
 	</div>
 	<div class="blog-paragraph">That was just the first Chapter from the book. Phew!</div>
+	<div class="blog-sub-header">Lexical scope</div>
+	<div class="blog-paragraph">
+		JavaScript uses the lexical scope and so do most programming languages. Scope as defined earlier
+		is a means of finding a declared identifier and Lexing examines a string of characters and gives
+		it semantic meaning. So lexical scope is the scope defined during the time of lexing.
+	</div>
+	<div class="blog-paragraph">
+		In order to understand the idea of lexical scope it's important to understand how a lookup works
+		in JavaScript. Like always, let's start with an example.
+	</div>
+	<div class="blog-code-block">{@html marked(lexicalScope)}</div>
+	<div class="blog-paragraph">
+		In the example above we have three different scopes
+		<ol>
+			<li>Global scope where outer function is declared</li>
+			<li>Scope of the outer function</li>
+			<li>Scope of the inner function</li>
+		</ol>
+		It's ideal to look at this from inside out. When the
+		<code>console.log(num, num2)</code>
+		executes the engine goes looking for the two identifiers. It searches for <code>num</code> first
+		in the scope of function <code>inner</code> and cannot find it, the next available scope is the
+		scope of the function <code>outer</code> and there it finds the variable <code>num</code>. It
+		does a similar lookup for the variable <code>num2</code> and finds it in the scope of outer. But
+		the variable <code>num3</code> it finds in the global scope, the same scope where the outer function
+		is called. The way I look at scope look ups is the way concentric circles are drawn, they have neat
+		boundaries and they do not intersect.
+	</div>
+	<ConcentricCircle />
 </div>
 
 <style>
