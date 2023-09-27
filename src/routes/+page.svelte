@@ -4,8 +4,8 @@
 
 <div class="blog-main-page-container">
 	<div class="blog-main-header">
-		<h1>Learning JavaScript Blog</h1>
-		<span>by Dheeraj Kumar Dhall</span>
+		<div class="blog-main-heading">Generic Blog</div>
+		<div class="blog-owner-name">by Dheeraj Kumar Dhall</div>
 	</div>
 
 	<div class="blog-list-container">
@@ -18,14 +18,23 @@
 </div>
 
 <style>
-	.blog-main-page-container {
-		margin: 0px auto;
-		padding: 100px;
-		max-width: 800px;
+	.blog-main-header {
+		background-color: #4b6043;
+		height: 200px;
 	}
 
-	.blog-main-header {
+	.blog-main-heading {
 		text-align: center;
+		font-size: 40px;
+		padding-top: 50px;
+		color: white;
+	}
+
+	.blog-owner-name {
+		text-align: center;
+		font-size: 20px;
+		margin-top: 10px;
+		color: white;
 	}
 
 	.blog-list-container {

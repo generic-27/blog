@@ -28,7 +28,7 @@ export const shadowing = `
         var a = 10;
 
         function test2() {
-            var a = 20; // Shadows the one in the outer scope
+            var a = 20; // Shadows outer scope
             console.log(a);
         }
 

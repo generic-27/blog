@@ -146,7 +146,7 @@ Please report this to https://github.com/markedjs/marked.`,e){const i="<p>An err
         var a = 10;
 
         function test2() {
-            var a = 20; // Shadows the one in the outer scope
+            var a = 20; // Shadows outer scope
             console.log(a);
         }
 
