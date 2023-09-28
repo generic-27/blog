@@ -1,6 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 
-const dev = "production" === "development";
+const dev = 'production' === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,11 +9,11 @@ const config = {
 		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
-			pages: "docs",
-			assets: "docs"
+			pages: 'docs',
+			assets: 'docs'
 		}),
 		paths: {
-			base: dev ? "" : "/blog" 
+			base: dev ? '' : '/blog'
 		}
 	}
 };
