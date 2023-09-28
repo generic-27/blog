@@ -1,13 +1,9 @@
 <script>
-	import YouDontKnowJs from '../components/blog/you_dont_know_js/you-dont-know-js.svelte';
+	import '@fontsource/roboto';
 </script>
 
-<div>
-	<div class="blog-main-header-container">
-		<div class="blog-main-heading">Generic Blog</div>
-		<div class="blog-owner-name">by Dheeraj Kumar Dhall</div>
-	</div>
-	<YouDontKnowJs />
+<div class="blog-main-page-container">
+	<slot />
 </div>
 
 <style>

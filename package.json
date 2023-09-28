@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/roboto": "^5.0.8",
 		"marked": "^9.0.3"
 	}
 }

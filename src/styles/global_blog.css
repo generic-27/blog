@@ -1,25 +1,33 @@
+.blog-main-header-container {
+	background-color: #77c3ec;
+	height: 100px;
+}
+
 .blog-text-container {
-	margin: 0px auto;
+	margin: 100px auto;
 	padding: 100px;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Roboto', sans-serif;
 	width: 50%;
 	line-height: 1.5;
-	background-color: #cbd5c0;
+	background-color: #cccccc;
 }
 
 .blog-sub-header {
 	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	margin-top: 20px;
 }
 
 .blog-paragraph {
 	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.8em;
 }
 
 .blog-list-elements {
 	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
 }
 
 .blog-code-block {
@@ -28,6 +36,7 @@
 	padding: 10px;
 	color: white;
 	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
 }
 
 code {
@@ -35,15 +44,11 @@ code {
 	color: white;
 	padding: 4px;
 	border-radius: 3px;
+	font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
 	.blog-text-container {
-		/* margin: 0px auto;
-		padding: 100px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		width: 100%;
-		line-height: 1.5; */
 		width: 100%;
 	}
 }
