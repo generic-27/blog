@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 
 	function handleHomeClick() {
-		goto('/');
+		goto('/blog/');
 	}
 </script>
 
