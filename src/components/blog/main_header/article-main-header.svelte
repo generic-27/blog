@@ -2,12 +2,12 @@
 	import { goto } from '$app/navigation';
 
 	function handleHomeClick() {
-		goto('/blog');
+		goto('/');
 	}
 </script>
 
 <div class="blog-article-main-header">
-	<a href="/blog" class="home-button">Home</a>
+	<button class="home-button" on:click={handleHomeClick}>Home</button>
 </div>
 
 <style>
@@ -18,9 +18,11 @@
 	}
 
 	.home-button {
-		text-decoration: none;
 		color: white;
 		font-size: 30px;
 		margin: 20px;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 </style>
