@@ -149,4 +149,13 @@
 
 <style>
 	@import '../../../../styles/global_blog.css';
+
+	.up-and-going-container {
+		background-color: #2f2f2f;
+	}
+
+	.blog-text-container {
+		background-color: #0e1111;
+		color: #e6e6e6;
+	}
 </style>

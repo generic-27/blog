@@ -21,6 +21,7 @@
 		font-size: 30px;
 		font-family: 'Roboto', sans-serif;
 		text-align: center;
+		color: #e6e6e6;
 	}
 
 	.blog-list-container {

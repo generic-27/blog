@@ -20,25 +20,33 @@
 
 <style>
 	.blog-article-card {
-		width: 25%;
-		height: 100px;
+		width: 30%;
+		height: 150px;
 		border: 1px solid black;
-		background-color: #cccccc;
-		box-shadow: 2px 2px 2px black;
+		background-color: #004173;
+		box-shadow: 2px 2px 2px #0065b34d;
+		/* color: #278cda; */
+		color: #e6e6e6;
+		border-radius: 10px;
 	}
 
 	.blog-article-heading {
 		font-size: 20px;
 		font-family: 'Roboto', sans-serif;
-		margin: 5px 0px 0px 20px;
+		margin: 20px 0px 0px 20px;
+	}
+
+	.card-footer {
+		margin: 60px 0px 0px 20px;
 	}
 
 	.blog-article-button {
 		width: 60px;
 		height: 30px;
-	}
-
-	.card-footer {
-		margin: 30px 0px 0px 20px;
+		background-color: #75b6e7;
+		border-radius: 5px;
+		font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 500;
 	}
 </style>

@@ -2,7 +2,7 @@
 	import YouDontKnowJs from '../components/blog/you_dont_know_js/you-dont-know-js.svelte';
 </script>
 
-<div>
+<div class="page-container">
 	<div class="blog-main-header-container">
 		<div class="blog-main-heading">Generic Blog</div>
 		<div class="blog-owner-name">by Dheeraj Kumar Dhall</div>
@@ -11,8 +11,12 @@
 </div>
 
 <style>
+	.page-container {
+		background-color: #0e1111;
+	}
+
 	.blog-main-header-container {
-		background-color: #77c3ec;
+		background-color: #3b444b;
 		height: 200px;
 	}
 

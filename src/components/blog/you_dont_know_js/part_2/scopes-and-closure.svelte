@@ -13,7 +13,7 @@
 	import ArticleMainHeader from '../../main_header/article-main-header.svelte';
 </script>
 
-<div>
+<div class="scopes-and-closure-container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
 		<h1>Scopes and closure</h1>
@@ -160,4 +160,12 @@
 
 <style>
 	@import '../../../../styles/global_blog.css';
+	.scopes-and-closure-container {
+		background-color: #2f2f2f;
+	}
+
+	.blog-text-container {
+		background-color: #0e1111;
+		color: #e6e6e6;
+	}
 </style>

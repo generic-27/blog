@@ -13,12 +13,12 @@
 <style>
 	.blog-article-main-header {
 		display: flex;
-		background-color: #77c3ec;
+		background-color: #3b444b;
 		height: 80px;
 	}
 
 	.home-button {
-		color: white;
+		color: #e6e6e6;
 		font-size: 30px;
 		margin: 20px;
 		background: none;
