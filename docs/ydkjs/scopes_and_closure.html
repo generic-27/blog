@@ -6,45 +6,49 @@
 		<meta name="viewport" content="width=device-width" />
 		
 		<link href="../_app/immutable/assets/0.a812a8d2.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/4.6fe77cc0.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.66d666cd.js">
+		<link href="../_app/immutable/assets/4.092ae532.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.7347d8df.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.5e8a2acb.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.10c4af39.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.c7b1a79e.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.f554d6a2.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.2b92d2ca.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/0.aed0d02b.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/2.934ac79d.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.bb30c383.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.258ac0dd.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.fbca61e7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.e69455f3.js">
 	</head>
 	<body style="margin: 0">
-		<div style="display: contents">  <div class="blog-main-page-container svelte-1sef5n7"><div class="blog-container"><div class="scopes-and-closure-container svelte-n7yi8i"><div class="blog-article-main-header svelte-32lr1t"><button class="home-button svelte-32lr1t" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container svelte-n7yi8i"><h1 data-svelte-h="svelte-jbzrqt">Scopes and closure</h1> <div class="blog-paragraph" data-svelte-h="svelte-15iq4bh">This book is awesome! I wish I had read it sooner. Most programming languages that I have
-			used, I never spent time to fully understand the depths of it. With YDKJS, I aim to break that
-			trend and truly understand how JavaScript works!<br><br></div> <div class="blog-paragraph" data-svelte-h="svelte-1w3su2e">The second part of this books covers some very interesting topics which mainly revolve around
-			scopes and closure. There are still certain parts in the chapters (<b>Closure</b>) that I do
-			not fully understand, but may be once I approach the ending of this article I might have a
+		<div style="display: contents">  <div class="blog-main-page-container svelte-1sef5n7"><div class="blog-container"><div class="scopes-and-closure-container svelte-at8n2j"><div class="blog-article-main-header svelte-32lr1t"><button class="home-button svelte-32lr1t" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container"><h1 data-svelte-h="svelte-jbzrqt">Scopes and closure</h1> <div class="blog-paragraph" data-svelte-h="svelte-1c4zecq">This book is awesome! I wish I had read it sooner. Most programming languages that I have
+			used, I never spent the time to fully understand the depths of it. With YDKJS, I aim to break
+			that trend and truly understand how JavaScript works!<br><br></div> <div class="blog-paragraph" data-svelte-h="svelte-n3fggm">The second part of this book covers some very interesting topics which mainly revolve around
+			scopes and closure. There are still certain parts in the chapters (<b>Closure!</b>) that I do
+			not fully understand. But, may be once I approach the ending of this article I might have a
 			better idea.</div> <div class="blog-sub-header" data-svelte-h="svelte-2up3yp">Scope and Compiler theory</div> <div class="blog-paragraph" data-svelte-h="svelte-5zllcz">Scope refers to a well defined set of rules that allow us to store variables in some location
 			and access them from that location. In order to understand how this works we need to
-			understand some basic <b>Compiler theory</b></div> <div class="blog-paragraph" data-svelte-h="svelte-173858">Any compiled language undergoes three main steps during its compilations process. JavaScript
-			is considered to be an interpreted language but that would be wrong. It undergoes compilations
-			just mere mircoseconds before execution. The three basic steps that I was referring to are.
+			understand some basic <b>Compiler theory</b></div> <div class="blog-paragraph" data-svelte-h="svelte-13nancv">JavaScript is considered to be an interpreted language but that would be wrong. It undergoes
+			compilation just mere mircoseconds before execution. Understanding those performance
+			improvements that make it compile so quickly was a little beyond the topics in this book but,
+			I definitely would like to revisit and understand those improvements (An article for the
+			future). Getting back to compilation. Any compiled language undergoes three main steps during
+			its compilation process.
 			<ol class="blog-list-elements"><li>Tokenizing/Lexing</li> <li>Parsing</li> <li>Code generation</li></ol></div> <div class="blog-paragraph" data-svelte-h="svelte-x4xuqg"><b>Tokenizing</b> involves taking a string of characters and breaking down it into meaningful chunks
 			called tokens. Lexing is synonmous to Tokenization with a difference of stateful parsing. If the
 			tokenization involves some kind of state based approach then it would be called Lexing</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    var num = 3;
 </code></pre>
 <!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1we0e0z">The above example when tokenized might get broken down into <code>var</code>, <code>a</code>,
-			<code>=</code>, <code>3</code>, <code>;</code></div> <div class="blog-paragraph" data-svelte-h="svelte-tev9cv"><b>Parsing</b> uses the array of tokens and creates a nested tree, which is called a Abstract
-			syntax tree. for the above example <code>var num = 3;</code> it might create a tree structure that
+			<code>=</code>, <code>3</code>, <code>;</code></div> <div class="blog-paragraph" data-svelte-h="svelte-1lvnh79"><b>Parsing</b> uses the array of tokens and creates a nested tree, which is called an Abstract
+			syntax tree. For the above example <code>var num = 3;</code> it might create a tree structure that
 			could look like this.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    Variable declaration
     |---Identifier (a)
     |---Assignment expression
         |---Numerical literal(2)
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-fx28w9">Finally the last step, <b>Code generation</b> takes the Abstract syntax tree and creates executable
-			code</div> <div class="blog-sub-header" data-svelte-h="svelte-1ysabik">More on scope</div> <div class="blog-paragraph" data-svelte-h="svelte-1319u24">There are three important members involved in understanding scope
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-19lyqfn">Finally the last step, <b>Code generation</b> - It takes the Abstract syntax tree and creates executable
+			code.</div> <div class="blog-paragraph" data-svelte-h="svelte-1ag31e0">There is much more to the compilation process that I need to learn. Truly understanding a
+			language requires some serious work! One step at a time! We&#39;ll get there!</div> <div class="blog-sub-header" data-svelte-h="svelte-1ysabik">More on scope</div> <div class="blog-paragraph" data-svelte-h="svelte-mxfe5q">There are three important members involved in understanding scope
 			<ol class="blog-list-elements"><li>Engine</li> <li>Compiler</li> <li>Scope</li></ol>
-			Engine runs from start to finish, from variable declaration to program execution. Compiler handles
+			Engine runs from start to finish. From variable declaration to program execution. Compiler handles
 			the dirty work. Parsing code and code generation. Sope holds a lookup list for all the declrations
 			(variables, functions etc..)</div> <div class="blog-paragraph">If we were to go back to the example of a simple variable declaration <code data-svelte-h="svelte-xlrv0q">var num = 2;</code>
 			two distinct actions take place here. To our eye it&#39;s just one expression, but for JavaScript it&#39;s
@@ -54,12 +58,12 @@
     var num;
     num = 2;
 </code></pre>
-<!-- HTML_TAG_END --></div></div> <div class="blog-paragraph" data-svelte-h="svelte-8ljzql">The compiler declares a variable at this step if it has not been declared yet. Compiler
-			queries the scope and asks if the variable <code>num</code> was declared, if it was then it moves
-			on and does not declare a variable but if there isn&#39;t a variable declared then it declares one.
-			This part is pretty interesting in JavaScript, it allows us to declare the same variable multiple
-			times. In a nested scope this would be termed shadowing, where it overwrites the value declared
-			in the outerscope. The example below explains shadowing.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    function test() {
+<!-- HTML_TAG_END --></div></div> <div class="blog-paragraph" data-svelte-h="svelte-1efdofv">Looking at the example above, the compiler declares a variable at this step if it has not been
+			declared yet. Compiler queries the scope and asks if the variable <code>num</code> was declared,
+			if it was then it moves on and does not declare a variable but if there isn&#39;t a variable declared
+			then it declares one. This part is pretty interesting in JavaScript, it allows us to declare the
+			same variable multiple times. In a nested scope this would be termed shadowing, where it overwrites
+			the value declared in the outerscope. The example below explains shadowing.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    function test() {
         var a = 10;
 
         function test2() {
@@ -119,7 +123,7 @@
 			
 			<script>
 				{
-					__sveltekit_1pyl6sc = {
+					__sveltekit_10vle58 = {
 						assets: "/blog",
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
@@ -130,8 +134,8 @@
 					const data = [null,null,{"type":"data","data":null,"uses":{}}];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.66d666cd.js"),
-						import("../_app/immutable/entry/app.c7b1a79e.js")
+						import("../_app/immutable/entry/start.7347d8df.js"),
+						import("../_app/immutable/entry/app.f554d6a2.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 4],

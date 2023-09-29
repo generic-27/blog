@@ -19,13 +19,13 @@
 		<h1>Scopes and closure</h1>
 		<div class="blog-paragraph">
 			This book is awesome! I wish I had read it sooner. Most programming languages that I have
-			used, I never spent time to fully understand the depths of it. With YDKJS, I aim to break that
-			trend and truly understand how JavaScript works!<br /><br />
+			used, I never spent the time to fully understand the depths of it. With YDKJS, I aim to break
+			that trend and truly understand how JavaScript works!<br /><br />
 		</div>
 		<div class="blog-paragraph">
-			The second part of this books covers some very interesting topics which mainly revolve around
-			scopes and closure. There are still certain parts in the chapters (<b>Closure</b>) that I do
-			not fully understand, but may be once I approach the ending of this article I might have a
+			The second part of this book covers some very interesting topics which mainly revolve around
+			scopes and closure. There are still certain parts in the chapters (<b>Closure!</b>) that I do
+			not fully understand. But, may be once I approach the ending of this article I might have a
 			better idea.
 		</div>
 		<div class="blog-sub-header">Scope and Compiler theory</div>
@@ -35,9 +35,12 @@
 			understand some basic <b>Compiler theory</b>
 		</div>
 		<div class="blog-paragraph">
-			Any compiled language undergoes three main steps during its compilations process. JavaScript
-			is considered to be an interpreted language but that would be wrong. It undergoes compilations
-			just mere mircoseconds before execution. The three basic steps that I was referring to are.
+			JavaScript is considered to be an interpreted language but that would be wrong. It undergoes
+			compilation just mere mircoseconds before execution. Understanding those performance
+			improvements that make it compile so quickly was a little beyond the topics in this book but,
+			I definitely would like to revisit and understand those improvements (An article for the
+			future). Getting back to compilation. Any compiled language undergoes three main steps during
+			its compilation process.
 			<ol class="blog-list-elements">
 				<li>Tokenizing/Lexing</li>
 				<li>Parsing</li>
@@ -55,14 +58,18 @@
 			<code>=</code>, <code>3</code>, <code>;</code>
 		</div>
 		<div class="blog-paragraph">
-			<b>Parsing</b> uses the array of tokens and creates a nested tree, which is called a Abstract
-			syntax tree. for the above example <code>var num = 3;</code> it might create a tree structure that
+			<b>Parsing</b> uses the array of tokens and creates a nested tree, which is called an Abstract
+			syntax tree. For the above example <code>var num = 3;</code> it might create a tree structure that
 			could look like this.
 		</div>
 		<div class="blog-code-block">{@html marked(abstractSyntaxTree)}</div>
 		<div class="blog-paragraph">
-			Finally the last step, <b>Code generation</b> takes the Abstract syntax tree and creates executable
-			code
+			Finally the last step, <b>Code generation</b> - It takes the Abstract syntax tree and creates executable
+			code.
+		</div>
+		<div class="blog-paragraph">
+			There is much more to the compilation process that I need to learn. Truly understanding a
+			language requires some serious work! One step at a time! We'll get there!
 		</div>
 		<div class="blog-sub-header">More on scope</div>
 		<div class="blog-paragraph">
@@ -72,7 +79,7 @@
 				<li>Compiler</li>
 				<li>Scope</li>
 			</ol>
-			Engine runs from start to finish, from variable declaration to program execution. Compiler handles
+			Engine runs from start to finish. From variable declaration to program execution. Compiler handles
 			the dirty work. Parsing code and code generation. Sope holds a lookup list for all the declrations
 			(variables, functions etc..)
 		</div>
@@ -84,12 +91,12 @@
 			<div class="blog-code-block">{@html marked(variableDeclaration)}</div>
 		</div>
 		<div class="blog-paragraph">
-			The compiler declares a variable at this step if it has not been declared yet. Compiler
-			queries the scope and asks if the variable <code>num</code> was declared, if it was then it moves
-			on and does not declare a variable but if there isn't a variable declared then it declares one.
-			This part is pretty interesting in JavaScript, it allows us to declare the same variable multiple
-			times. In a nested scope this would be termed shadowing, where it overwrites the value declared
-			in the outerscope. The example below explains shadowing.
+			Looking at the example above, the compiler declares a variable at this step if it has not been
+			declared yet. Compiler queries the scope and asks if the variable <code>num</code> was declared,
+			if it was then it moves on and does not declare a variable but if there isn't a variable declared
+			then it declares one. This part is pretty interesting in JavaScript, it allows us to declare the
+			same variable multiple times. In a nested scope this would be termed shadowing, where it overwrites
+			the value declared in the outerscope. The example below explains shadowing.
 		</div>
 		<div class="blog-code-block">{@html marked(shadowing)}</div>
 		<div class="blog-paragraph">
@@ -162,10 +169,5 @@
 	@import '../../../../styles/global_blog.css';
 	.scopes-and-closure-container {
 		background-color: #2f2f2f;
-	}
-
-	.blog-text-container {
-		background-color: #0e1111;
-		color: #e6e6e6;
 	}
 </style>
