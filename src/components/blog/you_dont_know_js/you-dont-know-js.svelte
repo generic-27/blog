@@ -36,6 +36,10 @@
 			margin: 0px 30px;
 		}
 
+		.main-heading {
+			margin-top: 50px;
+		}
+
 		.blog-list-container {
 			display: flex;
 			flex-direction: column;
