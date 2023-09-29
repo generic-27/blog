@@ -30,4 +30,16 @@
 		gap: 20px;
 		margin-top: 20px;
 	}
+
+	@media screen and (max-width: 600px) {
+		.blog-ydkjs-container {
+			margin: 0px 30px;
+		}
+
+		.blog-list-container {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+		}
+	}
 </style>

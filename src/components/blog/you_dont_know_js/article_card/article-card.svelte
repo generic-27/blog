@@ -49,4 +49,15 @@
 		font-family: 'Roboto', sans-serif;
 		font-weight: 500;
 	}
+
+	@media screen and (max-width: 600px) {
+		.blog-article-card {
+			width: 100%;
+			height: 200px;
+		}
+
+		.card-footer {
+			margin: 110px 20px;
+		}
+	}
 </style>
