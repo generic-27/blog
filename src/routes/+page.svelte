@@ -1,4 +1,5 @@
 <script>
+	import AzureFundamentals from '../components/blog/azure/azure_fundamentals/azure-fundamentals.svelte';
 	import YouDontKnowJs from '../components/blog/you_dont_know_js/you-dont-know-js.svelte';
 </script>
 
@@ -8,6 +9,7 @@
 		<div class="blog-owner-name">by Dheeraj Kumar Dhall</div>
 	</div>
 	<YouDontKnowJs />
+	<!-- <AzureFundamentals /> -->
 </div>
 
 <style>

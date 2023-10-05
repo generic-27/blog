@@ -65,3 +65,11 @@ export const lexicalScope = `
     outer(2);
 \`\`\`
 `;
+
+export const hoistingExampleOne = `
+\`\`\`
+    a = 2;
+    var a;
+    console.log(a); // Prints 2 
+\`\`\`
+`;

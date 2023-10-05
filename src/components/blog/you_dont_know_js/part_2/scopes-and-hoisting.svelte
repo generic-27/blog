@@ -2,12 +2,13 @@
 	import { marked } from 'marked';
 	import {
 		abstractSyntaxTree,
+		hoistingExampleOne,
 		lexicalScope,
 		lhsRhsLookup,
 		shadowing,
 		tokenization,
 		variableDeclaration
-	} from './markdown-files/scopes-and-closure';
+	} from './markdown-files/scopes-and-hoisting';
 
 	import ConcentricCircle from './concentric-circle.svelte';
 	import ArticleMainHeader from '../../main_header/article-main-header.svelte';
@@ -16,7 +17,7 @@
 <div class="scopes-and-closure-container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Scopes and closure</h1>
+		<h1>Scopes and Hoisting</h1>
 		<div class="blog-paragraph">
 			This book is awesome! I wish I had read it sooner. Most programming languages that I have
 			used, I never spent the time to fully understand the depths of it. With YDKJS, I aim to break
@@ -24,9 +25,8 @@
 		</div>
 		<div class="blog-paragraph">
 			The second part of this book covers some very interesting topics which mainly revolve around
-			scopes and closure. There are still certain parts in the chapters (<b>Closure!</b>) that I do
-			not fully understand. But, may be once I approach the ending of this article I might have a
-			better idea.
+			scopes and closure. Since this is going to be a longer article in comparison, I will move
+			closure to a separate article.
 		</div>
 		<div class="blog-sub-header">Scope and Compiler theory</div>
 		<div class="blog-paragraph">
@@ -162,6 +162,35 @@
 			are drawn, they have neat boundaries and they do not intersect.
 		</div>
 		<ConcentricCircle />
+		<div class="blog-paragraph">
+			Understanding of scope directly relates to understanding
+			<b>The Principle of least privilege</b> - Expose only what is minimally necessary, and hide everything
+			else. These concentric division allow us to enclose variables and functions within scopes and not
+			expose it in a global context. What does that accomplish? It avoids collisions! Makes sure that
+			two identifiers intended for different usecases do not stomp on each other.
+		</div>
+		<div class="blog-paragraph">
+			<b>SCOPE -> PRINCIPLE OF LEAST PRIVILEGE -> COLLISION AVOIDANCE</b>
+		</div>
+		<div class="blog-sub-header">Hoisting</div>
+		<div class="blog-paragraph">
+			Hoisting in JavaScript refers to the process of moving the function and variables to the the
+			top of the code from where they were declared. This is one of the crucial parts of JavaScript,
+			I mean for developers. Not understanding hoisting can lead to writing code that's hard to
+			decipher.
+		</div>
+		<div class="blog-code-block">{@html marked(hoistingExampleOne)}</div>
+		<div class="blog-paragraph">
+			In the above example even though we would expect it to print undefined, it prints 2. Why? If
+			we go back to the definition above, the <code>var a;</code> gets hoisted and placed on the
+			top. So the first statement that executes is the declaration of that variable, by the time it
+			gets to <code>a = 2;</code> the variable exists, so it assigns the value to 2 that container. Another
+			important thing to note here it that between a variable and a function, functions get hoisted first!
+		</div>
+		<div class="blog-paragraph">
+			This chapter has been really interesting so far. There's one last topic left to discuss and I
+			will be doing that in the next article.
+		</div>
 	</div>
 </div>
 
@@ -169,5 +198,6 @@
 	@import '../../../../styles/global_blog.css';
 	.scopes-and-closure-container {
 		background-color: #2f2f2f;
+		height: 100%;
 	}
 </style>

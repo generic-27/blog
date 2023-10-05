@@ -1,19 +1,19 @@
 <script>
-	import { blogDataYdkjs } from '../../../util/blog-data';
-	import ArticleCard from '../article_card/article-card.svelte';
+	import { blogDataAzure } from '../../../../util/blog-data';
+	import ArticleCard from '../../article_card/article-card.svelte';
 </script>
 
-<div class="blog-ydkjs-container">
-	<div class="main-heading">You don't know JS</div>
+<div class="blog-azure-container">
+	<div class="main-heading">Azure Fundamentals</div>
 	<div class="blog-list-container">
-		{#each blogDataYdkjs as data}
+		{#each blogDataAzure as data}
 			<ArticleCard articleHeading={data.title} articlePath={data.path} />
 		{/each}
 	</div>
 </div>
 
 <style>
-	.blog-ydkjs-container {
+	.blog-azure-container {
 		margin: 100px 0px 0px 100px;
 	}
 
@@ -32,7 +32,7 @@
 	}
 
 	@media screen and (max-width: 600px) {
-		.blog-ydkjs-container {
+		.blog-azure-container {
 			margin: 0px 30px;
 		}
 
