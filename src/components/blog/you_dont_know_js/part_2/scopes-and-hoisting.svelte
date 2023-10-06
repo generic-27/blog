@@ -144,7 +144,7 @@
 			works in JavaScript. Like always, let's start with an example.
 		</div>
 		<div class="blog-code-block">{@html marked(lexicalScope)}</div>
-		<div class="blog-paragraph">
+		<div class="blog-paragraph" id="concentric-circle">
 			In the example above we have three different scopes
 			<ol>
 				<li>Global scope where outer function is declared</li>

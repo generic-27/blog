@@ -4,8 +4,12 @@ export const blogDataYdkjs = [
 		path: 'ydkjs/up_and_going'
 	},
 	{
-		title: 'Scopes and closure',
-		path: 'ydkjs/scopes_and_closure'
+		title: 'Scopes and hoisting',
+		path: 'ydkjs/scopes_and_hoisting'
+	},
+	{
+		title: 'Closure',
+		path: 'ydkjs/closure'
 	}
 ];
 

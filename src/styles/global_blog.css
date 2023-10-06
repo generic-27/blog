@@ -16,7 +16,7 @@
 }
 
 .blog-paragraph {
-	margin-top: 10px;
+	margin-top: 20px;
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.8em;
 	font-size: 18px;
@@ -29,7 +29,7 @@
 
 .blog-code-block {
 	background-color: #3b444b;
-	margin-top: 10px;
+	margin-top: 20px;
 	padding: 10px;
 	color: white;
 	border-radius: 5px;
