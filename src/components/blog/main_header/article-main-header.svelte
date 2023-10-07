@@ -6,7 +6,7 @@
 	}
 </script>
 
-<div class="blog-article-main-header">
+<div class="blog-article-main-header sticky">
 	<button class="home-button" on:click={handleHomeClick}>Home</button>
 </div>
 
@@ -14,6 +14,12 @@
 	.blog-article-main-header {
 		display: flex;
 		background-color: #3b444b;
+	}
+
+	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
 		height: 80px;
 	}
 

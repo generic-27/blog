@@ -13,10 +13,6 @@
 </div>
 
 <style>
-	.page-container {
-		background-color: #0e1111;
-	}
-
 	.blog-main-header-container {
 		background-color: #3b444b;
 		height: 200px;

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #0e1111">
 	<head>
+		<title>Generic blog</title>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../_app/immutable/assets/0.a812a8d2.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/4.846e0ae6.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/article-main-header.9a74defb.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.b008f998.js">
+		<link href="../_app/immutable/assets/4.ba729a29.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/article-main-header.55319824.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.f6e7a909.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.9a48d6fd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.fd22b01d.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.81a3b32a.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.3fee4dd3.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.2b92d2ca.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.aed0d02b.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.bcfc22dc.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.27a5b9c0.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.9179af35.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.934ac79d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.1bf3dd96.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.e487053d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.e2301369.js">
 	</head>
 	<body style="margin: 0">
-		<div style="display: contents">  <div class="blog-main-page-container svelte-1sef5n7"><div class="blog-container"><div class="up-and-going-container svelte-ofy7lw"><div class="blog-article-main-header svelte-32lr1t"><button class="home-button svelte-32lr1t" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container"><h1 data-svelte-h="svelte-16bxzce">Up and going</h1> <div class="blog-paragraph" data-svelte-h="svelte-jmcxrd">The first statement that I ever heard in regards to JavaScript was the phrase &quot;
-			<strong>Dumb kid brother</strong>&quot;. It has been close to 7 years, since I started coding
+		<div style="display: contents">  <div class="blog-container"><div class="up-and-going-container svelte-ofy7lw"><div class="blog-article-main-header sticky svelte-k07hpd"><button class="home-button svelte-k07hpd" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container"><h1 data-svelte-h="svelte-16bxzce">Up and going</h1> <div class="blog-paragraph" data-svelte-h="svelte-d234l5">The first statement that I ever heard in regards to JavaScript was the phrase &quot;
+			<strong>Dumb kid brother</strong>&quot;. It has been close to 7 years since I started coding
 			seriously and I still do not understand, how the world&#39;s most widely used language that rules
-			the entire web space, works?</div> <div class="blog-paragraph" data-svelte-h="svelte-1npfhyh">The intention behind creating these articles is to mainly learn and treat them as a point of
+			the entire web space, works?</div> <div class="blog-paragraph" data-svelte-h="svelte-f75zlw">The intention behind creating these articles is to mainly learn and treat them as a point of
 			reference to solidify my understanding of <i>JavaScript</i>. This by chance, also happens to
-			be the first blog that I have ever written and I am hoping I can make this a hobby.</div> <div class="blog-sub-header" data-svelte-h="svelte-1i0c26i">Up and Going</div> <div class="blog-paragraph" data-svelte-h="svelte-1au80is">The first part of this series <strong>(You don&#39;t know JS)</strong> was a general introduction
+			be the first blog that I have ever written and I am hoping I can turn this into a hobby.</div> <div class="blog-sub-header" data-svelte-h="svelte-1i0c26i">Up and Going</div> <div class="blog-paragraph" data-svelte-h="svelte-1au80is">The first part of this series <strong>(You don&#39;t know JS)</strong> was a general introduction
 			to programming and a discussion of some aspects of <i>JavaScript</i>. There are few topics
 			that caught my attention.
 			<a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&%20going/README.md#you-dont-know-js-up--going" target="_blank">YDKJS</a> <ul class="blog-list-elements"><li>Coercion</li> <li>Typed values not typed variables</li> <li>Equality</li> <li>Hoisting</li> <li>Closure</li> <li>Polyfilling</li> <li>Transpiling</li></ul></div> <div class="blog-sub-header" data-svelte-h="svelte-1gz8uxg">Coercion</div> <div class="blog-paragraph">At the basic level coercion in JavaScript is conversion of a type into another. There are two
@@ -46,19 +46,19 @@
   var num2 = num * 1;
 </code></pre>
 <!-- HTML_TAG_END --></div> <p data-svelte-h="svelte-1ulolye">The conversion in the first case is explicit, we know that num is a string. In the second
-				case the value of num is coerced into a number.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-il2h6u">Typed values not typed variables</div> <div class="blog-paragraph" data-svelte-h="svelte-qmlowg"><p>There is a neat way to learn the type of a variable in JavaScript. It&#39;s the typeof()
-				operator. When checking the type of a variable, JavaScript looks at the value of the
-				variable and not the variable itself. The variables in JavaScript are merely containers of <code>types</code>.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-zkjv4w">Equality</div> <div class="blog-paragraph" data-svelte-h="svelte-cdu7ip"><p>Equality in JavaScript comes in two flavors <code>==</code> and <code>===</code>. The
+				case the value of num is coerced into a number.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-il2h6u">Typed values not typed variables</div> <div class="blog-paragraph" data-svelte-h="svelte-t53yhc"><p>There is a neat way to learn the type of a variable in JavaScript. It&#39;s the <code>typeof()</code>
+				operator. When checking the type of a variable, JavaScript looks at the value of the variable
+				and not the variable itself. The variables in JavaScript are merely containers of types.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-zkjv4w">Equality</div> <div class="blog-paragraph" data-svelte-h="svelte-cdu7ip"><p>Equality in JavaScript comes in two flavors <code>==</code> and <code>===</code>. The
 				easiest way to understand these would be that <code>==</code> checks for equality with
 				coercion and
 				<code>===</code> does not allow coercion, which is often called &quot;strict equality&quot;</p> <p>For the past 7 years I believed that the difference between <code>==</code> and
 				<code>===</code> is that strict equality checked the reference and the other checked the value.
 				I was missing the understanding of the word coercion! I still do think that the avoiding == makes
-				sense when working with other people. Somewhere down the line people can make mistakes.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-1m8q6hv">Hoisting</div> <div class="blog-paragraph"><p data-svelte-h="svelte-1nyptvw">On declaring a variable in JavaScript, it&#39;s made available throughout the entire scope it
-				was declared in. JavaScript hoists that variable to the top, to be accessed throughout. The
-				same works for functions. Variable hoisting can cause a lot of confusion and it&#39;s better to
-				avoid it. The best approach is to use JavaScript in &quot;strict&quot; mode and use let for variable
-				declaration.</p> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>  function hoistedVariable() {
+				sense when working with other people. Somewhere down the line people can make mistakes.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-1m8q6hv">Hoisting</div> <div class="blog-paragraph"><p data-svelte-h="svelte-d8fbjs">On declaring a variable in JavaScript, it&#39;s made available throughout the entire scope it
+				was declared in. JavaScript hoists that variable to the top and it&#39;s available to the entire
+				scope. The same works for functions. Variable hoisting can cause a lot of confusion and it&#39;s
+				better to avoid it. The best approach is to use JavaScript in &quot;strict&quot; mode and use let for
+				variable declaration.</p> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>  function hoistedVariable() {
     console.log(a); // This will be undefined
 
     a = 4;
@@ -68,11 +68,11 @@
     var a;
   }
 </code></pre>
-<!-- HTML_TAG_END --></div> <p data-svelte-h="svelte-1k7xm40">In the above example, on calling the function <code>hoistedVariable</code> we notice that
+<!-- HTML_TAG_END --></div> <p data-svelte-h="svelte-jz2io5">In the above example, on calling the function <code>hoistedVariable</code> we notice that
 				the variable until initialized prints a value of <code>undefined</code>. The declaration of
 				the variable
 				<code>a</code> is on the last line but, due to hoisting in JavaScript, the variable is available
-				in the entire scope.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-1mj3tvz">Closure</div> <div class="blog-paragraph"><p data-svelte-h="svelte-udzufc">One can think of Closure as a way to &quot;remember&quot; a function&#39;s scope, like variables, even
+				throughout the scope.</p></div> <div class="blog-sub-header" data-svelte-h="svelte-1mj3tvz">Closure</div> <div class="blog-paragraph"><p data-svelte-h="svelte-udzufc">One can think of Closure as a way to &quot;remember&quot; a function&#39;s scope, like variables, even
 				after the function has finished executing. The best way to explain closure is through an
 				example</p> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>  function makeAdder(x) {
 
@@ -101,11 +101,11 @@
     };
   }
 </code></pre>
-<!-- HTML_TAG_END --></div></div></div> </div></div> </div> 
+<!-- HTML_TAG_END --></div></div></div> </div></div> 
 			
 			<script>
 				{
-					__sveltekit_1on5buk = {
+					__sveltekit_1x6k81m = {
 						assets: "/blog",
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
@@ -116,8 +116,8 @@
 					const data = [null,{"type":"data","data":null,"uses":{}}];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.b008f998.js"),
-						import("../_app/immutable/entry/app.81a3b32a.js")
+						import("../_app/immutable/entry/start.f6e7a909.js"),
+						import("../_app/immutable/entry/app.3fee4dd3.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],

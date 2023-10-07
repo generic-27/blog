@@ -16,14 +16,14 @@
 		<h1>Up and going</h1>
 		<div class="blog-paragraph">
 			The first statement that I ever heard in regards to JavaScript was the phrase "
-			<strong>Dumb kid brother</strong>". It has been close to 7 years, since I started coding
+			<strong>Dumb kid brother</strong>". It has been close to 7 years since I started coding
 			seriously and I still do not understand, how the world's most widely used language that rules
 			the entire web space, works?
 		</div>
 		<div class="blog-paragraph">
 			The intention behind creating these articles is to mainly learn and treat them as a point of
 			reference to solidify my understanding of <i>JavaScript</i>. This by chance, also happens to
-			be the first blog that I have ever written and I am hoping I can make this a hobby.
+			be the first blog that I have ever written and I am hoping I can turn this into a hobby.
 		</div>
 		<div class="blog-sub-header">Up and Going</div>
 		<div class="blog-paragraph">
@@ -77,11 +77,11 @@
 		<div class="blog-sub-header">Typed values not typed variables</div>
 		<div class="blog-paragraph">
 			<p>
-				There is a neat way to learn the type of a variable in JavaScript. It's the typeof()
-				operator. When checking the type of a variable, JavaScript looks at the value of the
-				variable and not the variable itself. The variables in JavaScript are merely containers of <code
-					>types</code
-				>.
+				There is a neat way to learn the type of a variable in JavaScript. It's the <code
+					>typeof()</code
+				>
+				operator. When checking the type of a variable, JavaScript looks at the value of the variable
+				and not the variable itself. The variables in JavaScript are merely containers of types.
 			</p>
 		</div>
 		<div class="blog-sub-header">Equality</div>
@@ -103,10 +103,10 @@
 		<div class="blog-paragraph">
 			<p>
 				On declaring a variable in JavaScript, it's made available throughout the entire scope it
-				was declared in. JavaScript hoists that variable to the top, to be accessed throughout. The
-				same works for functions. Variable hoisting can cause a lot of confusion and it's better to
-				avoid it. The best approach is to use JavaScript in "strict" mode and use let for variable
-				declaration.
+				was declared in. JavaScript hoists that variable to the top and it's available to the entire
+				scope. The same works for functions. Variable hoisting can cause a lot of confusion and it's
+				better to avoid it. The best approach is to use JavaScript in "strict" mode and use let for
+				variable declaration.
 			</p>
 			<div class="blog-code-block">{@html marked(hoisting)}</div>
 			<p>
@@ -114,7 +114,7 @@
 				the variable until initialized prints a value of <code>undefined</code>. The declaration of
 				the variable
 				<code>a</code> is on the last line but, due to hoisting in JavaScript, the variable is available
-				in the entire scope.
+				throughout the scope.
 			</p>
 		</div>
 		<div class="blog-sub-header">Closure</div>

@@ -25,8 +25,8 @@
 		</div>
 		<div class="blog-paragraph">
 			The second part of this book covers some very interesting topics which mainly revolve around
-			scopes and closure. Since this is going to be a longer article in comparison, I will move
-			closure to a separate article.
+			scopes, hoisting and closure. Since this is going to be a longer article in comparison, I will
+			move closure to a separate article.
 		</div>
 		<div class="blog-sub-header">Scope and Compiler theory</div>
 		<div class="blog-paragraph">
@@ -50,7 +50,7 @@
 		<div class="blog-paragraph">
 			<b>Tokenizing</b> involves taking a string of characters and breaking down it into meaningful chunks
 			called tokens. Lexing is synonmous to Tokenization with a difference of stateful parsing. If the
-			tokenization involves some kind of state based approach then it would be called Lexing
+			tokenization involves some kind of state based approach then it would be called Lexing.
 		</div>
 		<div class="blog-code-block">{@html marked(tokenization)}</div>
 		<div class="blog-paragraph">
