@@ -9,7 +9,7 @@
 		<div class="blog-owner-name">by Dheeraj Kumar Dhall</div>
 	</div>
 	<YouDontKnowJs />
-	<!-- <AzureFundamentals /> -->
+	<AzureFundamentals />
 </div>
 
 <style>

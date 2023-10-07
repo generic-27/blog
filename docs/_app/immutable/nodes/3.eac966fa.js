@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" style="background-color: #0e1111">
-	<head>
-		<title>Generic blog</title>
-		<meta charset="utf-8" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		
-		<link href="../_app/immutable/assets/3.29eb7307.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/article-main-header.55319824.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.91fb452c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.11be70a0.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.1ba0d015.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.2b92d2ca.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.934ac79d.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/3.eac966fa.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.87437fe5.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.82fb95f6.js">
-	</head>
-	<body style="margin: 0">
-		<div style="display: contents">  <div class="blog-container"><div class="describing_cloud_concepts_container svelte-9zw7n7"><div class="blog-article-main-header sticky svelte-k07hpd"><button class="home-button svelte-k07hpd" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container" data-svelte-h="svelte-16ac98p"><h1>Describing cloud concepts</h1> <div class="blog-paragraph">With software development I have always felt like I start my journey in a chopper and I get
+import{e as x,A as $}from"../chunks/article-main-header.87437fe5.js";import{s as v,n as k}from"../chunks/scheduler.e108d1fd.js";import{S as b,i as y,g as h,r as _,s as T,h as p,j as w,u as S,c as P,y as D,f as d,k as m,a as A,v as I,x as g,d as l,t as u,w as C,b as E,p as O}from"../chunks/index.2b92d2ca.js";function j({params:o}){switch(o.slug){case"describing_cloud_concepts":return{path:"describing_cloud_concepts"};default:throw x(404,"Not found")}}const W=Object.freeze(Object.defineProperty({__proto__:null,load:j},Symbol.toStringTag,{value:"Module"}));function z(o){let t,s,e,i,r=`<h1>Describing cloud concepts</h1> <div class="blog-paragraph">With software development I have always felt like I start my journey in a chopper and I get
 			dropped in the middle of a maze. From there, I need to rummage through the thick opaque walls
 			of leaves and figure out where the starting point is. Sometimes I figure a way out, but most
 			of the times the maze engulfs me! Wow! I made it too dramatic!</div> <div class="blog-paragraph">I have spent some time working with Azure services and there is a gap in my knowledge that I
@@ -55,33 +33,4 @@
 			<ol class="blog-list-elements"><li>Capital expenditure (CapEx)</li> <li>Operational expenditure (OpEx)</li></ol>
 			Capital expenditure is a one time spend (Subjectively). Example is setting up a data center. Contrastingly,
 			operational expenditure is spending money on services over time. Cloud computing falls in the second
-			bracket. The idea is to pay for what you use.</div></div> </div></div> 
-			
-			<script>
-				{
-					__sveltekit_1rl7gm4 = {
-						assets: "/blog",
-						base: new URL("..", location).pathname.slice(0, -1),
-						env: {}
-					};
-
-					const element = document.currentScript.parentElement;
-
-					const data = [null,{"type":"data","data":null,"uses":{}}];
-
-					Promise.all([
-						import("../_app/immutable/entry/start.91fb452c.js"),
-						import("../_app/immutable/entry/app.1ba0d015.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element, {
-							node_ids: [0, 3],
-							data,
-							form: null,
-							error: null
-						});
-					});
-				}
-			</script>
-		</div>
-	</body>
-</html>
+			bracket. The idea is to pay for what you use.</div>`,c;return s=new $({}),{c(){t=h("div"),_(s.$$.fragment),e=T(),i=h("div"),i.innerHTML=r,this.h()},l(a){t=p(a,"DIV",{class:!0});var n=w(t);S(s.$$.fragment,n),e=P(n),i=p(n,"DIV",{class:!0,"data-svelte-h":!0}),D(i)!=="svelte-16ac98p"&&(i.innerHTML=r),n.forEach(d),this.h()},h(){m(i,"class","blog-text-container"),m(t,"class","describing_cloud_concepts_container svelte-9zw7n7")},m(a,n){A(a,t,n),I(s,t,null),g(t,e),g(t,i),c=!0},p:k,i(a){c||(l(s.$$.fragment,a),c=!0)},o(a){u(s.$$.fragment,a),c=!1},d(a){a&&d(t),C(s)}}}class M extends b{constructor(t){super(),y(this,t,null,z,v,{})}}function f(o){let t,s;return t=new M({}),{c(){_(t.$$.fragment)},l(e){S(t.$$.fragment,e)},m(e,i){I(t,e,i),s=!0},i(e){s||(l(t.$$.fragment,e),s=!0)},o(e){u(t.$$.fragment,e),s=!1},d(e){C(t,e)}}}function V(o){let t,s,e=o[0].path==="describing_cloud_concepts"&&f();return{c(){t=h("div"),e&&e.c(),this.h()},l(i){t=p(i,"DIV",{class:!0});var r=w(t);e&&e.l(r),r.forEach(d),this.h()},h(){m(t,"class","blog-container")},m(i,r){A(i,t,r),e&&e.m(t,null),s=!0},p(i,[r]){i[0].path==="describing_cloud_concepts"?e?r&1&&l(e,1):(e=f(),e.c(),l(e,1),e.m(t,null)):e&&(O(),u(e,1,1,()=>{e=null}),E())},i(i){s||(l(e),s=!0)},o(i){u(e),s=!1},d(i){i&&d(t),e&&e.d()}}}function q(o,t,s){let{data:e}=t;return o.$$set=i=>{"data"in i&&s(0,e=i.data)},[e]}class F extends b{constructor(t){super(),y(this,t,q,V,v,{data:0})}}export{F as component,W as universal};
