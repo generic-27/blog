@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #0e1111">
+	<head>
+		<title>Generic blog</title>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="../_app/immutable/assets/4.7bb022eb.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/article-main-header.55319824.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.adbd700d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.f5682e6c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.36a57a49.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.2b92d2ca.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.934ac79d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.b85f0223.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.5ca7b7b1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.6e81163d.js">
+	</head>
+	<body style="margin: 0">
+		<div style="display: contents">  <div class="blog-container"><div class="understanding_this_container svelte-1aivc9z"><div class="blog-article-main-header sticky svelte-k07hpd"><button class="home-button svelte-k07hpd" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container" data-svelte-h="svelte-1ob65o"><h1>Understanding This</h1> <div class="blog-paragraph">The first time I was introduced to the keyword <code>this</code>, there was only confusion. My
+			confusion stemmed from the question, what really is <code>this</code>? We were learning the
+			programming language<b>C#</b> and <code>this</code> referred to the class reference. Even
+			though it&#39;s easier to grasp the concept in the context of language like <b>C#</b>, I still
+			found it a bit confusing. Now, years later reading about the <code>this</code> keyword in JavaScript,
+			brought back those memories.</div> <div class="blog-paragraph">The <code>this</code> keyword in JavaScript has a very different usecase. Carrying the idea of
+			the class reference in <b>C#</b> to functions in JavaScript, caused a misconception which is quite
+			common among developers. I assumed the this reference in a function referred to the function itself.
+			The decision to truly understand the language was the best one!</div> <div class="blog-paragraph"><code>this</code> is not an author time binding, but a runtime binding. The binding has
+			nothing to do with where the function is declared, but everything to do with where and how the
+			function is called. When a function gets invoked in JavaScript, it creates an activation
+			record, which is also known as an execution context. This record contains information about
+			<ul class="blog-list-elements"><li>Where the function was called from</li> <li>How the function was invoked</li> <li>What parameters were passed, etc.</li></ul>
+			Amongst that list of properties is another one which is the this reference and that&#39;s used for
+			the duration of the function execution</div></div> </div></div> 
+			
+			<script>
+				{
+					__sveltekit_1cefhff = {
+						assets: "/blog",
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,{"type":"data","data":null,"uses":{}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.adbd700d.js"),
+						import("../_app/immutable/entry/app.36a57a49.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

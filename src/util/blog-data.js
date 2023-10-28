@@ -10,6 +10,10 @@ export const blogDataYdkjs = [
 	{
 		title: 'Closure',
 		path: 'ydkjs/closure'
+	},
+	{
+		title: 'Understanding this',
+		path: 'ydkjs/understanding_this'
 	}
 ];
 

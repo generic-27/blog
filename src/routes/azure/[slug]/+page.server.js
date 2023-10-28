@@ -1,6 +1,8 @@
+import { DESCRIBING_CLOUD_CONCEPTS } from '../../../util/route-constants';
+
 /** @type {import('./$types').EntryGenerator} */
 export function entries() {
-	return [{ slug: 'describing_cloud_concepts' }];
+	return [{ slug: DESCRIBING_CLOUD_CONCEPTS }];
 }
 
 export const prerender = true;
