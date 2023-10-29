@@ -20,7 +20,7 @@
 
 <style>
 	.blog-article-card {
-		width: 30%;
+		width: 20%;
 		height: 150px;
 		border: 1px solid black;
 		background-color: #004173;

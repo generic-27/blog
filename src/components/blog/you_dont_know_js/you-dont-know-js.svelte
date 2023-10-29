@@ -27,8 +27,10 @@
 	.blog-list-container {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		gap: 20px;
-		margin-top: 20px;
+		margin: 20px auto;
+		justify-content: center;
 	}
 
 	@media screen and (max-width: 600px) {
