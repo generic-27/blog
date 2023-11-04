@@ -1,5 +1,6 @@
 import {
 	CLOSURE,
+	OBJECTS,
 	SCOPES_AND_HOISTING,
 	UNDERSTANDING_THIS,
 	UP_AND_GOING
@@ -11,7 +12,8 @@ export function entries() {
 		{ slug: UP_AND_GOING },
 		{ slug: SCOPES_AND_HOISTING },
 		{ slug: CLOSURE },
-		{ slug: UNDERSTANDING_THIS }
+		{ slug: UNDERSTANDING_THIS },
+		{ slug: OBJECTS }
 	];
 }
 

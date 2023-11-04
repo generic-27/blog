@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import {
 	CLOSURE,
+	OBJECTS,
 	SCOPES_AND_HOISTING,
 	UNDERSTANDING_THIS,
 	UP_AND_GOING
@@ -17,6 +18,8 @@ export function load({ params }) {
 			return { path: CLOSURE };
 		case UNDERSTANDING_THIS:
 			return { path: UNDERSTANDING_THIS };
+		case OBJECTS:
+			return { path: OBJECTS };
 		default:
 			throw error(404, 'Not found');
 	}

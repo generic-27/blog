@@ -14,6 +14,10 @@ export const blogDataYdkjs = [
 	{
 		title: 'Understanding this',
 		path: 'ydkjs/understanding_this'
+	},
+	{
+		title: 'Objects',
+		path: 'ydkjs/objects'
 	}
 ];
 

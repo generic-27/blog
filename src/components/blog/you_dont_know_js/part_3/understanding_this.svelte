@@ -68,47 +68,47 @@
 		</div>
 		<div class="blog-sub-header">Implicit binding</div>
 		<div class="blog-paragraph">
-			This rule determines if the call-site has a context <code>Object</code> which can also be
-			referred to as the owning object. In the example below that context <code>Object</code> is
+			This rule determines if the call-site has a context <code>object</code> which can also be
+			referred to as the owning object. In the example below that context <code>object</code> is
 			<code>obj</code>
 			<div class="blog-code-block">{@html marked(implicitBinding)}</div>
 			<div class="blog-paragraph">
 				The way<code>foo</code> gets referenced in the<code>obj</code> does not imply that it is
-				owned by the said <code>Object</code>. Since, there exists a context <code>Object</code>
+				owned by the said <code>object</code>. Since, there exists a context <code>object</code>
 				that references the function at the call-site, the implicit binding rules state that the
-				<code>function</code> is owned by the context <code>Object</code>.
+				<code>function</code> is owned by the context <code>object</code>.
 			</div>
 			<div class="blog-paragraph">
 				When <code>this</code> gets implicity bound the context becomes synonmous with the owning
-				<code>Object</code>. In the above case <code>this.a</code> is synonmous with
+				<code>object</code>. In the above case <code>this.a</code> is synonmous with
 				<code>obj.a</code>
 			</div>
 		</div>
 		<div class="blog-sub-header">Explicit binding</div>
 		<div class="blog-paragraph">
-			Explicit binding allows us to explicitly state the <code>Object</code> that would act as the
-			context <code>Object</code> for the function that's invoked. In order to achieve this, every
+			Explicit binding allows us to explicitly state the <code>object</code> that would act as the
+			context <code>object</code> for the function that's invoked. In order to achieve this, every
 			function in JavaScript is provided with utilities and two of them are.
 			<ol class="blog-list-elements">
 				<li><code>call</code></li>
 				<li><code>apply</code></li>
 			</ol>
-			The first parameter of the above utilities is an<code>Object</code> which is implied that it
+			The first parameter of the above utilities is an<code>object</code> which is implied that it
 			is used for the <code>this</code> binding. When a simple primitive (<code>string</code>,
-			<code>number</code> ..) gets passed it is wrapped in it's <code>Object</code> form and this is
+			<code>number</code> ..) gets passed it is wrapped in it's <code>object</code> form and this is
 			referred to as <b>Boxing</b>.
 		</div>
 		<div class="blog-sub-header"><code>new</code> binding</div>
 		<div class="blog-paragraph">
-			JavaScript <code>new</code> operator unlike the <code>new</code> operator found in Object
+			JavaScript <code>new</code> operator unlike the <code>new</code> operator found in object
 			oriented programming languages does not call a <code>function</code> that has a constructor
-			but instead makes a contructor call that returns a new <code>Object</code>. What's important
+			but instead makes a contructor call that returns a new <code>object</code>. What's important
 			to us here is the idea of <code>this</code> binding through the usage of the <code>new</code>
 			operator.
 		</div>
 		<div class="blog-code-block">{@html marked(newBinding)}</div>
 		<div class="blog-paragraph">
-			The example above contructs a new <code>Object</code> and binds that new <code>Object</code>
+			The example above contructs a new <code>object</code> and binds that new <code>object</code>
 			to the call of <code>foo</code>. This sums up all the rules for binding <code>this</code> but,
 			there is an order of precedence.
 		</div>
@@ -116,12 +116,12 @@
 		<div class="blog-paragraph">
 			The order of precedence is somewhat like this
 			<ol class="blog-list-elements">
-				<li>If the <code>new</code> operator is used, use the newly created <code>Object</code></li>
+				<li>If the <code>new</code> operator is used, use the newly created <code>object</code></li>
 				<li>
 					If the call-site uses <code>call</code> or <code>apply</code> use the specified
-					<code>Object</code>
+					<code>object</code>
 				</li>
-				<li>If called with a context <code>Object</code> then use that <code>Object</code></li>
+				<li>If called with a context <code>object</code> then use that <code>object</code></li>
 				<li>Finally, the default binding</li>
 			</ol>
 		</div>
@@ -133,7 +133,7 @@
 		<div class="blog-code-block">{@html marked(lostBinding)}</div>
 		<div class="blog-paragraph">
 			In the above example the function <code>foo()</code> is implicity bound to the
-			<code>Object obj</code> which in turn is assigned to the variable <code>bar</code>. When
+			<code>object obj</code> which in turn is assigned to the variable <code>bar</code>. When
 			<code>bar</code> is invoked, it's invoked without any decoration and it's just another
 			reference to <code>foo</code>. There is a fix for such a scenario and we call it Hard binding
 		</div>

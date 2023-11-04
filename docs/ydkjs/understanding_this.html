@@ -6,18 +6,18 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../_app/immutable/assets/4.7bb022eb.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.4ef0ed4e.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/article-main-header.55319824.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.b39e3b6d.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.bd3a145b.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.6c6e780c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.b4832734.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.045db4ff.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.d00c1d83.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.2b92d2ca.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/0.934ac79d.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.3c28888e.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.c0068cb6.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.6c0b666c.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.36bd7b44.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.9d852d06.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.2d03f78e.js">
 	</head>
 	<body style="margin: 0">
 		<div style="display: contents">  <div class="blog-container"><div class="understanding_this_container svelte-1aivc9z"><div class="blog-article-main-header sticky svelte-k07hpd"><button class="home-button svelte-k07hpd" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container"><h1 data-svelte-h="svelte-14q1hfy">Understanding This</h1> <div class="blog-paragraph" data-svelte-h="svelte-kz4lmi">The first time I was introduced to the keyword <code>this</code>, there was only confusion. My
@@ -47,8 +47,8 @@
     foo(); // 2
 </code></pre>
 <!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-8avcu5">The call-site in the above example is in the global context and this resolves to the global
-				context.</div></div> <div class="blog-sub-header" data-svelte-h="svelte-mu8xb6">Implicit binding</div> <div class="blog-paragraph">This rule determines if the call-site has a context <code data-svelte-h="svelte-sbeg5v">Object</code> which can also be
-			referred to as the owning object. In the example below that context <code data-svelte-h="svelte-sbeg5v">Object</code> is
+				context.</div></div> <div class="blog-sub-header" data-svelte-h="svelte-mu8xb6">Implicit binding</div> <div class="blog-paragraph">This rule determines if the call-site has a context <code data-svelte-h="svelte-s6nf5f">object</code> which can also be
+			referred to as the owning object. In the example below that context <code data-svelte-h="svelte-s6nf5f">object</code> is
 			<code data-svelte-h="svelte-vvasqx">obj</code> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>   function foo() {
        console.log(a);
    }
@@ -60,21 +60,21 @@
 
    obj.foo();
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-e9k6gb">The way<code>foo</code> gets referenced in the<code>obj</code> does not imply that it is
-				owned by the said <code>Object</code>. Since, there exists a context <code>Object</code>
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1u26aq3">The way<code>foo</code> gets referenced in the<code>obj</code> does not imply that it is
+				owned by the said <code>object</code>. Since, there exists a context <code>object</code>
 				that references the function at the call-site, the implicit binding rules state that the
-				<code>function</code> is owned by the context <code>Object</code>.</div> <div class="blog-paragraph" data-svelte-h="svelte-1lccppk">When <code>this</code> gets implicity bound the context becomes synonmous with the owning
-				<code>Object</code>. In the above case <code>this.a</code> is synonmous with
-				<code>obj.a</code></div></div> <div class="blog-sub-header" data-svelte-h="svelte-15pd8q3">Explicit binding</div> <div class="blog-paragraph" data-svelte-h="svelte-1t8zjv4">Explicit binding allows us to explicitly state the <code>Object</code> that would act as the
-			context <code>Object</code> for the function that&#39;s invoked. In order to achieve this, every
+				<code>function</code> is owned by the context <code>object</code>.</div> <div class="blog-paragraph" data-svelte-h="svelte-1pd2x54">When <code>this</code> gets implicity bound the context becomes synonmous with the owning
+				<code>object</code>. In the above case <code>this.a</code> is synonmous with
+				<code>obj.a</code></div></div> <div class="blog-sub-header" data-svelte-h="svelte-15pd8q3">Explicit binding</div> <div class="blog-paragraph" data-svelte-h="svelte-19lb28g">Explicit binding allows us to explicitly state the <code>object</code> that would act as the
+			context <code>object</code> for the function that&#39;s invoked. In order to achieve this, every
 			function in JavaScript is provided with utilities and two of them are.
 			<ol class="blog-list-elements"><li><code>call</code></li> <li><code>apply</code></li></ol>
-			The first parameter of the above utilities is an<code>Object</code> which is implied that it
+			The first parameter of the above utilities is an<code>object</code> which is implied that it
 			is used for the <code>this</code> binding. When a simple primitive (<code>string</code>,
-			<code>number</code> ..) gets passed it is wrapped in it&#39;s <code>Object</code> form and this is
-			referred to as <b>Boxing</b>.</div> <div class="blog-sub-header" data-svelte-h="svelte-1gams9s"><code>new</code> binding</div> <div class="blog-paragraph" data-svelte-h="svelte-9qvbko">JavaScript <code>new</code> operator unlike the <code>new</code> operator found in Object
+			<code>number</code> ..) gets passed it is wrapped in it&#39;s <code>object</code> form and this is
+			referred to as <b>Boxing</b>.</div> <div class="blog-sub-header" data-svelte-h="svelte-1gams9s"><code>new</code> binding</div> <div class="blog-paragraph" data-svelte-h="svelte-1jy3h5k">JavaScript <code>new</code> operator unlike the <code>new</code> operator found in object
 			oriented programming languages does not call a <code>function</code> that has a constructor
-			but instead makes a contructor call that returns a new <code>Object</code>. What&#39;s important
+			but instead makes a contructor call that returns a new <code>object</code>. What&#39;s important
 			to us here is the idea of <code>this</code> binding through the usage of the <code>new</code>
 			operator.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>  function foo(a) {
       this.a = a
@@ -83,11 +83,11 @@
   var bar = new foo(10);
   console.log(bar.a); // 10
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-192f3f1">The example above contructs a new <code>Object</code> and binds that new <code>Object</code>
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-jkk5u5">The example above contructs a new <code>object</code> and binds that new <code>object</code>
 			to the call of <code>foo</code>. This sums up all the rules for binding <code>this</code> but,
-			there is an order of precedence.</div> <div class="blog-sub-header" data-svelte-h="svelte-3baxvp">Order of precedence</div> <div class="blog-paragraph" data-svelte-h="svelte-2a47h2">The order of precedence is somewhat like this
-			<ol class="blog-list-elements"><li>If the <code>new</code> operator is used, use the newly created <code>Object</code></li> <li>If the call-site uses <code>call</code> or <code>apply</code> use the specified
-					<code>Object</code></li> <li>If called with a context <code>Object</code> then use that <code>Object</code></li> <li>Finally, the default binding</li></ol></div> <div class="blog-sub-header" data-svelte-h="svelte-w7xtgf">Lost bindings - Hard binding</div> <div class="blog-paragraph" data-svelte-h="svelte-1h8kfrd">Bindings sometime can get lost, which usually implies that it&#39;s fallen back to the default
+			there is an order of precedence.</div> <div class="blog-sub-header" data-svelte-h="svelte-3baxvp">Order of precedence</div> <div class="blog-paragraph" data-svelte-h="svelte-5anpcm">The order of precedence is somewhat like this
+			<ol class="blog-list-elements"><li>If the <code>new</code> operator is used, use the newly created <code>object</code></li> <li>If the call-site uses <code>call</code> or <code>apply</code> use the specified
+					<code>object</code></li> <li>If called with a context <code>object</code> then use that <code>object</code></li> <li>Finally, the default binding</li></ol></div> <div class="blog-sub-header" data-svelte-h="svelte-w7xtgf">Lost bindings - Hard binding</div> <div class="blog-paragraph" data-svelte-h="svelte-1h8kfrd">Bindings sometime can get lost, which usually implies that it&#39;s fallen back to the default
 			binding.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    function foo() {
         console.log(this.a);
     }
@@ -102,8 +102,8 @@
 
     bar(); // call-site without decoration
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1x2hn64">In the above example the function <code>foo()</code> is implicity bound to the
-			<code>Object obj</code> which in turn is assigned to the variable <code>bar</code>. When
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1bt0v8s">In the above example the function <code>foo()</code> is implicity bound to the
+			<code>object obj</code> which in turn is assigned to the variable <code>bar</code>. When
 			<code>bar</code> is invoked, it&#39;s invoked without any decoration and it&#39;s just another
 			reference to <code>foo</code>. There is a fix for such a scenario and we call it Hard binding</div> <div class="blog-sub-header" data-svelte-h="svelte-1h8jj0c">Hard binding</div> <div class="blog-paragraph" data-svelte-h="svelte-pfj1ln">Hard binding is a variation around the explicit binding which seals the binding.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code class="language-{">    function foo() {
         console.log(this.a);
@@ -163,7 +163,7 @@
 			
 			<script>
 				{
-					__sveltekit_6rsj90 = {
+					__sveltekit_1yej8gu = {
 						assets: "/blog",
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
@@ -174,8 +174,8 @@
 					const data = [null,{"type":"data","data":null,"uses":{}}];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.b39e3b6d.js"),
-						import("../_app/immutable/entry/app.045db4ff.js")
+						import("../_app/immutable/entry/start.bd3a145b.js"),
+						import("../_app/immutable/entry/app.d00c1d83.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
