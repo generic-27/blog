@@ -44,8 +44,9 @@
 		width: 60px;
 		height: 30px;
 		background-color: #75b6e7;
+		border-color: #75b6e7;
 		border-radius: 5px;
-		font-size: 14px;
+		font-size: 12px;
 		font-family: 'Roboto', sans-serif;
 		font-weight: 500;
 	}

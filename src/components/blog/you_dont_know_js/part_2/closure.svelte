@@ -12,7 +12,7 @@
 <div class="closure-container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Closure</h1>
+		<div class="blog-title">Closure</div>
 		<div class="blog-paragraph">
 			Closure in JavaScript is, when a function is able to remember and access its lexical scope
 			even when the function is executing outside is lexical scope.

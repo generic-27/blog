@@ -13,7 +13,7 @@
 <div class="up-and-going-container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Up and going</h1>
+		<div class="blog-title">Up and going</div>
 		<div class="blog-paragraph">
 			The first statement that I ever heard in regards to JavaScript was the phrase "
 			<strong>Dumb kid brother</strong>". It has been close to 7 years since I started coding
@@ -25,7 +25,6 @@
 			reference to solidify my understanding of <i>JavaScript</i>. This by chance, also happens to
 			be the first blog that I have ever written and I am hoping I can turn this into a hobby.
 		</div>
-		<div class="blog-sub-header">Up and Going</div>
 		<div class="blog-paragraph">
 			The first part of this series <strong>(You don't know JS)</strong> was a general introduction
 			to programming and a discussion of some aspects of <i>JavaScript</i>. There are few topics

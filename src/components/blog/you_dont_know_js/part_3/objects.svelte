@@ -7,7 +7,7 @@
 <div class="objects_container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Objects</h1>
+		<div class="blog-title">Objects</div>
 		<div class="blog-paragraph">
 			Everything in JavaScript is an <code>object</code> - A misconception I have been living with.
 			<code>objects</code> are the building blocks in JavaScript but they are one of the 6 primary

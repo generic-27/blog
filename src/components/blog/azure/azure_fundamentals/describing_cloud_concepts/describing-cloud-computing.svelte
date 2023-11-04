@@ -5,7 +5,7 @@
 <div class="describing_cloud_concepts_container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Describing cloud concepts</h1>
+		<div class="blog-title">Describing cloud computing</div>
 		<div class="blog-paragraph">
 			With software development I have always felt like I start my journey in a chopper and I get
 			dropped in the middle of a maze. From there, I need to rummage through the thick opaque walls

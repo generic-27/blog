@@ -15,7 +15,7 @@
 <div class="understanding_this_container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Understanding This</h1>
+		<div class="blog-title">Understanding This</div>
 		<div class="blog-paragraph">
 			The first time I was introduced to the keyword <code>this</code>, there was only confusion. My
 			confusion stemmed from the question, what really is <code>this</code>? We were learning the

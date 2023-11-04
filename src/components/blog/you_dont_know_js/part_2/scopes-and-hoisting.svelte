@@ -17,7 +17,7 @@
 <div class="scopes-and-closure-container">
 	<ArticleMainHeader />
 	<div class="blog-text-container">
-		<h1>Scopes and Hoisting</h1>
+		<div class="blog-title">Scopes and Hoisting</div>
 		<div class="blog-paragraph">
 			This book is awesome! I wish I had read it sooner. Most programming languages that I have
 			used, I never spent the time to fully understand the depths of it. With YDKJS, I aim to break
