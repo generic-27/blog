@@ -27,6 +27,13 @@
 	font-size: 18px;
 }
 
+.blog-paragraph-sub-header {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	margin-top: 20px;
+}
+
 .blog-list-elements {
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;

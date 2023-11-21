@@ -1,7 +1,13 @@
 <script>
 	import { marked } from 'marked';
 	import ArticleMainHeader from '../../main_header/article-main-header.svelte';
-	import { builtInObjects, deepCopy, deepCopyAllowed } from './markdown_files/objects';
+	import {
+		builtInObjects,
+		deepCopy,
+		deepCopyAllowed,
+		preventExtensions,
+		propertyDecsriptor
+	} from './markdown_files/objects';
 </script>
 
 <div class="objects_container">
@@ -11,7 +17,7 @@
 		<div class="blog-paragraph">
 			Everything in JavaScript is an <code>object</code> - A misconception I have been living with.
 			<code>objects</code> are the building blocks in JavaScript but they are one of the 6 primary
-			types.
+			types, which are.
 			<div>
 				<code>string</code>, <code>number</code>, <code>boolean</code>,
 				<code>null</code>,
@@ -21,10 +27,11 @@
 		<div class="blog-paragraph">
 			Everything in JavaScript is not an <code>object</code> but there are some some object
 			sub-types, which are also referred to as complex primitives. <code>function</code> for example
-			is a callable object, and they are referred to as the "first class". <code>Arrays</code> are
-			also <code>objects</code> with extra behavior and data is organization is more structured. So,
-			what is the difference between a primitive <code>string</code> and an <code>object</code>
-			<code>String</code>
+			is a callable object, and is referred to as the "first class". <code>Arrays</code> are also
+			<code>objects</code>
+			with extra behavior, and data organization is more structured. So, what is the difference between
+			a primitive <code>string</code> and an <code>object</code>
+			<code>String</code>?
 		</div>
 		<div class="blog-sub-header">Built-in objects</div>
 		<div class="blog-paragraph">
@@ -42,16 +49,16 @@
 		<div class="blog-paragraph">
 			The example above clearly demarcates the difference between a primitive and an
 			<code>object</code> type. The primitive variable is not an instance of the <code>String</code>
-			<code>object</code> type but is just a primitive literal. But, in order to perform any
-			operations on the the primitive variable it needs to be wrapped in the <code>object</code> type.
-			JavaScript handles coercing the value and we do not have to handle that manually.
+			<code>object</code> type, but is just a primitive literal. In order to perform any operation
+			on the the primitive variable it needs to be wrapped in the <code>object</code> type. JavaScript
+			handles coercing the value and we do not have to handle that manually.
 		</div>
 		<div class="blog-sub-header">Contents of an object</div>
 		<div class="blog-paragraph">
 			The contents of an <code>object</code> consist of values (which can be any type) stored at
 			specific named locations which are called properties. When we declare an <code>object</code> the
 			properties are not literally stored in the container. The property names are stored in the container
-			and those act as references to the where the value is stored.
+			and those act as references to the where the actual value is stored.
 		</div>
 		<div class="blog-paragraph">
 			There are two ways in which one can access <code>object</code> properties.
@@ -93,6 +100,69 @@
 		<div class="blog-paragraph">
 			When an<code>object</code> is JSON-safe(can be serialized to a JSON string and then re-parsed
 			to an <code>object</code> with same structure) it can be deep copied.
+		</div>
+		<div class="blog-sub-header">Property Descriptors</div>
+		<div class="blog-paragraph">
+			Prior to ES5 JavaScript did not have a mechanism to distinguish between the characteristics of
+			properties. But as a of ES5 one can declare and describe properties in terms of a property
+			descriptor. Let's look at an example below.
+		</div>
+		<div class="blog-code-block">{@html marked(propertyDecsriptor)}</div>
+		<div class="blog-paragraph">
+			As we see in the example above each propert described under an <code>object</code> has the
+			following properties, which default to true.
+			<ol class="blog-list-items">
+				<li>writable</li>
+				<li>enumerable</li>
+				<li>configurable</li>
+			</ol>
+			<ol>
+				<li>
+					When a property is set to have <code>writable</code> <code>true</code>, it implies that
+					the property ca be overwritten with a new value.
+				</li>
+				<li>
+					When a property has <code>configurable</code> set to <code>true</code> it implies that the
+					descriptor definition of the property can be changed. When it's false the descriptor definition
+					cannot be changed and also the property cannot be deleted.
+				</li>
+				<li>
+					The <code>enumerable</code> property controls the ability for a property to show up in object-property
+					enumerations.
+				</li>
+			</ol>
+		</div>
+		<div class="blog-sub-header">Immutability</div>
+		<div class="blog-paragraph">
+			Immutability in JavaScript is for creating <code>objects</code> that cannot be changed. This
+			can be done in numerous ways in JavaScript. One thing to remember though is that the following
+			methods only create shallow immutability and do no affect <code>objects</code> that are
+			referenced inside another <code>object</code>
+			<div class="blog-paragraph-sub-header">Object constant</div>
+			<div>
+				By setting <code>writable: false</code> and <code>configurable: false</code> one can create a
+				constant that cannot be redefined or deleted.
+			</div>
+			<div class="blog-paragraph-sub-header">Prevent Extensions</div>
+			<div>
+				In order to prevent <code>object</code> from having new properties one could do the following
+			</div>
+			<div class="blog-code-block">{@html marked(preventExtensions)}</div>
+			<div class="blog-paragraph-sub-header">Seal</div>
+			<div>
+				This creates a sealed <code>object</code>, which basically means that it takes an existing
+				<code>object</code> and calls <code>preventExtensions</code> on that. This stops one from adding
+				extra properties to the object and also stops one from reconfiguring or deleting existing properties.
+				The values of properties can still be modified though.
+			</div>
+			<div class="blog-paragraph-sub-header">Freeze</div>
+			<div>
+				This creates a frozen <code>object</code>. The idea here is that it calls
+				<code>Object.seal(...)</code> on the <code>object</code> and marks all the "data accessor"
+				properties as <code>writable: false</code>, which stops from the values being changed as
+				well. This is the highest form of immutability and one should tread carefully when using
+				this.
+			</div>
 		</div>
 	</div>
 </div>

@@ -6,53 +6,54 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../_app/immutable/assets/4.26af42e8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.1c22f9ee.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/article-main-header.55319824.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.f7aa6087.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.14538904.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e108d1fd.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.3879be58.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.c92f24f9.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.ef1f1820.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.bd5ade60.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.2b92d2ca.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/0.934ac79d.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.a792ca62.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.db0717c9.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.189d07e1.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.8bd9270f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/article-main-header.3f8783d1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/navigation.8289f3a5.js">
 	</head>
 	<body style="margin: 0">
-		<div style="display: contents">  <div class="blog-container"><div class="objects_container svelte-17riu38"><div class="blog-article-main-header sticky svelte-k07hpd"><button class="home-button svelte-k07hpd" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container"><div class="blog-title" data-svelte-h="svelte-1n79vke">Objects</div> <div class="blog-paragraph" data-svelte-h="svelte-6f8u7p">Everything in JavaScript is an <code>object</code> - A misconception I have been living with.
+		<div style="display: contents">  <div class="blog-container"><div class="objects_container svelte-17riu38"><div class="blog-article-main-header sticky svelte-k07hpd"><button class="home-button svelte-k07hpd" data-svelte-h="svelte-ox9wwz">Home</button> </div> <div class="blog-text-container"><div class="blog-title" data-svelte-h="svelte-1n79vke">Objects</div> <div class="blog-paragraph" data-svelte-h="svelte-11p56ks">Everything in JavaScript is an <code>object</code> - A misconception I have been living with.
 			<code>objects</code> are the building blocks in JavaScript but they are one of the 6 primary
-			types.
+			types, which are.
 			<div><code>string</code>, <code>number</code>, <code>boolean</code>,
 				<code>null</code>,
-				<code>undefined</code>, <code>object</code></div></div> <div class="blog-paragraph" data-svelte-h="svelte-kfolhs">Everything in JavaScript is not an <code>object</code> but there are some some object
+				<code>undefined</code>, <code>object</code></div></div> <div class="blog-paragraph" data-svelte-h="svelte-uet2gk">Everything in JavaScript is not an <code>object</code> but there are some some object
 			sub-types, which are also referred to as complex primitives. <code>function</code> for example
-			is a callable object, and they are referred to as the &quot;first class&quot;. <code>Arrays</code> are
-			also <code>objects</code> with extra behavior and data is organization is more structured. So,
-			what is the difference between a primitive <code>string</code> and an <code>object</code> <code>String</code></div> <div class="blog-sub-header" data-svelte-h="svelte-1ne7xc4">Built-in objects</div> <div class="blog-paragraph" data-svelte-h="svelte-1kd7iyb">There are multiple <code>object</code> sub-types which are referred to as built-in objects.
+			is a callable object, and is referred to as the &quot;first class&quot;. <code>Arrays</code> are also
+			<code>objects</code>
+			with extra behavior, and data organization is more structured. So, what is the difference between
+			a primitive <code>string</code> and an <code>object</code> <code>String</code>?</div> <div class="blog-sub-header" data-svelte-h="svelte-1ne7xc4">Built-in objects</div> <div class="blog-paragraph" data-svelte-h="svelte-1kd7iyb">There are multiple <code>object</code> sub-types which are referred to as built-in objects.
 			<div><code>String</code>, <code>Number</code>, <code>Boolean</code>,
 				<code>Object</code>, <code>Function</code>, <code>Array</code>,
 				<code>Date</code>, <code>RegExp</code>, <code>Error</code></div>
 			Each of these
 			<code>objects</code> can be used as a contructor. Upon invocation it creates a new
 			<code>object</code> of the specified type.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    var strPrimitive = &quot;I am a string&quot;;
-    typeof strPrimitive;							// &quot;string&quot;
-    strPrimitive instanceof String;					// false
+    console.log(typeof strPrimitive);				// &quot;string&quot;
+    console.log(strPrimitive instanceof String);    // false
 
     var strObject = new String( &quot;I am a string&quot; );
-    typeof strObject; 								// &quot;object&quot;
-    strObject instanceof String;					// true
+    console.log(typeof strObject);					// &quot;object&quot;
+    console.log(strObject instanceof String);    	// true
 
     // inspect the object sub-type
     Object.prototype.toString.call( strObject );
 </code></pre>
-<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-16nuv56">The example above clearly demarcates the difference between a primitive and an
-			<code>object</code> type. The primitive variable is not an instance of the <code>String</code> <code>object</code> type but is just a primitive literal. But, in order to perform any
-			operations on the the primitive variable it needs to be wrapped in the <code>object</code> type.
-			JavaScript handles coercing the value and we do not have to handle that manually.</div> <div class="blog-sub-header" data-svelte-h="svelte-16wez9v">Contents of an object</div> <div class="blog-paragraph" data-svelte-h="svelte-y4relm">The contents of an <code>object</code> consist of values (which can be any type) stored at
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-c2a3yy">The example above clearly demarcates the difference between a primitive and an
+			<code>object</code> type. The primitive variable is not an instance of the <code>String</code> <code>object</code> type, but is just a primitive literal. In order to perform any operation
+			on the the primitive variable it needs to be wrapped in the <code>object</code> type. JavaScript
+			handles coercing the value and we do not have to handle that manually.</div> <div class="blog-sub-header" data-svelte-h="svelte-16wez9v">Contents of an object</div> <div class="blog-paragraph" data-svelte-h="svelte-1mmcxk6">The contents of an <code>object</code> consist of values (which can be any type) stored at
 			specific named locations which are called properties. When we declare an <code>object</code> the
 			properties are not literally stored in the container. The property names are stored in the container
-			and those act as references to the where the value is stored.</div> <div class="blog-paragraph" data-svelte-h="svelte-1ic1k41">There are two ways in which one can access <code>object</code> properties.
+			and those act as references to the where the actual value is stored.</div> <div class="blog-paragraph" data-svelte-h="svelte-1ic1k41">There are two ways in which one can access <code>object</code> properties.
 			<ol class="blog-list-elements"><li><code>.</code> operator</li> <li><code>[ ]</code> operator</li></ol>
 			The
 			<code>.</code> operator requires the properties to meet the <code>identifier</code> naming
@@ -87,11 +88,51 @@
 			and to know which <code>object</code> , we could do something like this.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    var newObj = JSON.parse( JSON.stringify( someObj ) );
 </code></pre>
 <!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-1lkjbvc">When an<code>object</code> is JSON-safe(can be serialized to a JSON string and then re-parsed
-			to an <code>object</code> with same structure) it can be deep copied.</div></div> </div></div> 
+			to an <code>object</code> with same structure) it can be deep copied.</div> <div class="blog-sub-header" data-svelte-h="svelte-36lpxh">Property Descriptors</div> <div class="blog-paragraph" data-svelte-h="svelte-1lbvmvj">Prior to ES5 JavaScript did not have a mechanism to distinguish between the characteristics of
+			properties. But as a of ES5 one can declare and describe properties in terms of a property
+			descriptor. Let&#39;s look at an example below.</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    var myObj = {
+        a: 2
+    };
+
+    console.log(Object.getOwnPropertyDescriptor(myObj, &quot;a&quot;));
+    // {
+    //      value: 2,
+    //      writable: true,
+    //      enumerable: true,
+    //      configurable: true
+    // }
+</code></pre>
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph" data-svelte-h="svelte-xyynwe">As we see in the example above each propert described under an <code>object</code> has the
+			following properties, which default to true.
+			<ol class="blog-list-items"><li>writable</li> <li>enumerable</li> <li>configurable</li></ol> <ol><li>When a property is set to have <code>writable</code> <code>true</code>, it implies that
+					the property ca be overwritten with a new value.</li> <li>When a property has <code>configurable</code> set to <code>true</code> it implies that the
+					descriptor definition of the property can be changed. When it&#39;s false the descriptor definition
+					cannot be changed and also the property cannot be deleted.</li> <li>The <code>enumerable</code> property controls the ability for a property to show up in object-property
+					enumerations.</li></ol></div> <div class="blog-sub-header" data-svelte-h="svelte-iti38i">Immutability</div> <div class="blog-paragraph">Immutability in JavaScript is for creating <code data-svelte-h="svelte-zga2ka">objects</code> that cannot be changed. This
+			can be done in numerous ways in JavaScript. One thing to remember though is that the following
+			methods only create shallow immutability and do no affect <code data-svelte-h="svelte-zga2ka">objects</code> that are
+			referenced inside another <code data-svelte-h="svelte-s6nf5f">object</code> <div class="blog-paragraph-sub-header" data-svelte-h="svelte-3ge1n4">Object constant</div> <div data-svelte-h="svelte-1csof2y">By setting <code>writable: false</code> and <code>configurable: false</code> one can create a
+				constant that cannot be redefined or deleted.</div> <div class="blog-paragraph-sub-header" data-svelte-h="svelte-545yhj">Prevent Extensions</div> <div data-svelte-h="svelte-1wn0qj7">In order to prevent <code>object</code> from having new properties one could do the following</div> <div class="blog-code-block"><!-- HTML_TAG_START --><pre><code>    var myObj = {
+        a: 2
+    };
+
+    Object.preventExtensions(myObj);
+
+    myObj.b = 3;
+    console.log(myObj.b); // undefined
+</code></pre>
+<!-- HTML_TAG_END --></div> <div class="blog-paragraph-sub-header" data-svelte-h="svelte-d996dc">Seal</div> <div data-svelte-h="svelte-1prk1jv">This creates a sealed <code>object</code>, which basically means that it takes an existing
+				<code>object</code> and calls <code>preventExtensions</code> on that. This stops one from adding
+				extra properties to the object and also stops one from reconfiguring or deleting existing properties.
+				The values of properties can still be modified though.</div> <div class="blog-paragraph-sub-header" data-svelte-h="svelte-1lrxxu">Freeze</div> <div data-svelte-h="svelte-3x5zpc">This creates a frozen <code>object</code>. The idea here is that it calls
+				<code>Object.seal(...)</code> on the <code>object</code> and marks all the &quot;data accessor&quot;
+				properties as <code>writable: false</code>, which stops from the values being changed as
+				well. This is the highest form of immutability and one should tread carefully when using
+				this.</div></div></div> </div></div> 
 			
 			<script>
 				{
-					__sveltekit_1jqx2ae = {
+					__sveltekit_qukdle = {
 						assets: "/blog",
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
@@ -102,8 +143,8 @@
 					const data = [null,{"type":"data","data":null,"uses":{}}];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.f7aa6087.js"),
-						import("../_app/immutable/entry/app.ef1f1820.js")
+						import("../_app/immutable/entry/start.14538904.js"),
+						import("../_app/immutable/entry/app.bd5ade60.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
